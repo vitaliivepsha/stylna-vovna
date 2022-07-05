@@ -1,0 +1,45 @@
+<div class="section consult-section">
+  <div class="container">
+    <div class="row consult-wrapper">
+      <div class="col">
+        <div class="consult-title">Свяжитесь с нами!</div>
+        <span class="consult-descr">Заполните форму и наши менеджеры ответят вам</span>
+        <a href="javascript:void(0)" class="consult-link">Контакты</a>
+      </div>
+      <div class="col">
+        <form class="consult-form ajax_form clear-styles" data-error-title="Ошибка отправки!" data-error-message="Попробуйте еще раз через некоторое время." data-success-title="Спасибо за сообщение" data-success-message="Наш менеджер свяжется с Вами в ближайшее время.">
+          <div class="radio-wrapper">
+            <span>Связаться как:</span>
+            <div class="radio">
+              <input type="radio" name="type" id="r1">
+              <label for="r1">Поставщик</label>
+            </div>
+            <div class="radio">
+              <input type="radio" name="type" id="r2">
+              <label for="r2">Дистрибьютор</label>
+            </div>
+            <div class="radio">
+              <input type="radio" name="type" id="r3">
+              <label for="r3">Потребитель</label>
+            </div>
+          </div>
+          <div class="input-wrapper">
+            <input class="input" type="text" name="name" placeholder="Имя" data-title="Имя" data-validate-required="Обязательное поле">
+          </div>
+          <div class="form-row">
+            <div class="input-wrapper">
+              <input class="input" type="email" name="email" placeholder="Email" data-title="Email" data-validate-required="Обязательное поле" data-validate-email="Неправильный email">
+            </div>
+            <div class="input-wrapper">
+              <input class="input" type="tel" name="phone" placeholder="Телефон" data-title="Телефон" data-validate-required="Обязательное поле" data-validate-uaphone="Неправильный номер">
+            </div>
+          </div>
+          <div class="input-wrapper">
+            <input class="input" type="text" name="comment" placeholder="Текст сообщения" data-title="Сообщение" data-validate-required="Обязательное поле">
+          </div>
+          <button type="submit" class="btn btn-tr">Отправить</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

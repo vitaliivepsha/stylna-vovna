@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="noindex">
+    <title>Stylna Vovna</title>
+    <link rel="icon" href="../../images/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" sizes="180x180" href="../../images/favicon.png" type="image/png">
+    <meta name="theme-color" content="#7A6DA6">
+    <meta name="msapplication-navbutton-color" content="#7A6DA6">
+    <meta name="apple-mobile-web-app-status-bar-style" content="#7A6DA6">
+</head>
+<body>
+
+${require('../parts/header.html')}
+<main class="main">
+    <div class="section main-section">
+        <div class="container">
+            <div class="main-left">
+                <picture>
+                    <source srcset="../../images/pixel.webp" data-original="../../images/main1.webp" class="lazy-web"
+                            type="image/webp">
+                    <source srcset="../../images/pixel.png" data-original="../../images/main1.png" class="lazy-web"
+                            type="image/png">
+                    <img src="../../images/pixel.png" data-original="../../images/main1.png" class="lazy" alt="">
+                </picture>
+            </div>
+            <div class="main-right">
+                <picture>
+                    <source srcset="../../images/pixel.webp" data-original="../../images/main2.webp" class="lazy-web"
+                            type="image/webp">
+                    <source srcset="../../images/pixel.png" data-original="../../images/main2.png" class="lazy-web"
+                            type="image/png">
+                    <img src="../../images/pixel.png" data-original="../../images/main2.png" class="lazy" alt="">
+                </picture>
+                <div class="main-title">ЭКОШУБЫ <br>ИЗ ОВЧИНЫ</div>
+                <span class="main-descr">Сучасно, зручно, доступно, практично, стильно та красиво. </span>
+            </div>
+        </div>
+        <!--<div class="main-slider slick-slider" data-slick='{"slidesToShow": 1, "slidesToScroll": 1, "fade": true, "autoplay": true, "arrows": true, "dots": true, "infinite": true}'>
+            <a class="slide" href="javascript:void(0)">
+                <picture>
+                    <source media="(max-width: 574px)" srcset="../../images/pixel.jpg" data-original="../../images/main1.png" class="lazy-web" type="image/png">
+                    <source srcset="../../images/pixel.png" data-original="../../images/main1.png" class="lazy-web" type="image/png">
+                    <img src="../../images/pixel.png" data-original="../../images/main1.png" class="lazy" alt="">
+                </picture>
+                <div class="container">
+                    <div class="main-wrapper">
+                        <picture class="txt-logo">
+                            <source srcset="../../images/pixel.webp" data-original="../../images/main1.webp" class="lazy-web"
+                                    type="image/webp">
+                            <source srcset="../../images/pixel.png" data-original="../../images/main1.png" class="lazy-web"
+                                    type="image/png">
+                            <img src="../../images/pixel.png" data-original="../../images/main1.png" class="lazy" alt="">
+                        </picture>
+                    </div>
+                </div>
+            </a>
+        </div>-->
+    </div>
+    <!--${require('../parts/consult.html')}-->
+</main>
+${require('../parts/footer.html')}
+
+</body>
+</html>
