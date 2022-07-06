@@ -437,7 +437,7 @@
           }
         }
         >div{
-          top: 100%;
+          top: calc(100% + 1px);
           opacity: 1;
           visibility: visible;
         }
