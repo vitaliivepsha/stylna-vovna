@@ -533,6 +533,13 @@
     right: 30px;
     bottom: 100%;
   }
+  &:after{
+    position: absolute;
+    content: '';
+    bottom: 100%;
+    width: 100%;
+    height: 20px;
+  }
 }
 
 .header-cart__head{
@@ -671,6 +678,21 @@
 
 .header-cart__btn{
   width: 152px;
+}
+
+.header-cart__empty{
+  .header-cart__head{
+    padding-top: 43px;
+    padding-bottom: 27px;
+  }
+  .header-cart__footer{
+    padding-top: 23px;
+    padding-bottom: 32px;
+    justify-content: center;
+    .header-cart__btn{
+      width: 180px;
+    }
+  }
 }
 
 .header-spacer{
