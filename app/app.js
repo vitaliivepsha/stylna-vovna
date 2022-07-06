@@ -57,15 +57,6 @@ $(function() {
 
     // header-search
 
-    /*$('.header-search').on('focusin', function () {
-            $(this).closest('.header-search__wrapper').addClass('focus');
-            $('body').addClass('open-search-results');
-    });*/
-    /*$('.header-search').on('focusout', function () {
-            $(this).closest('.header-search__wrapper').removeClass('focus');
-            $('body').removeClass('open-search-results');
-    });*/
-
     if ($('.header-search input[type="search"]').val().length) {
         $('.header-search button').css('pointer-events', 'auto');
     }
@@ -137,27 +128,10 @@ $(function() {
         e.stopPropagation();
     });
 
-    // header-search
-    // the input field
     var $input = $('.header-search input'),
         $content = $('.header-search .search-results'),
         $results,
-        //currentClass = 'current',
-        //offsetTop = 50,
         currentIndex = 0;
-
-    /*function jumpTo() {
-            if ($results.length) {
-                    var position,
-                            $current = $results.eq(currentIndex);
-                    $results.removeClass(currentClass);
-                    if ($current.length) {
-                            $current.addClass(currentClass);
-                            position = $current.offset().top - offsetTop;
-                            window.scrollTo(0, position);
-                    }
-            }
-    }*/
 
     $input.on('input', function () {
         var searchVal = this.value;
@@ -179,7 +153,6 @@ $(function() {
                     done: function () {
                         $results = $content.find('mark');
                         currentIndex = 0;
-                        //jumpTo();
                     }
                 });
             }
@@ -191,6 +164,30 @@ $(function() {
         else {
             $('.search-results > div > a').css('display', 'none');
             $('.search-results > div > span').css('display', 'flex');
+        }
+    });
+
+    // header cart
+
+    if ($('.cart-list li').length){
+        $('.full-cart').show();
+        $('.empty-cart').hide();
+    }
+    else{
+        $('.full-cart').hide();
+        $('.empty-cart').show();
+    }
+
+    $(document).on('click', '.cart-remove__btn', function () {
+        $(this).closest('li').remove();
+
+        if ($('.cart-list li').length){
+            $('.full-cart').show();
+            $('.empty-cart').hide();
+        }
+        else{
+            $('.full-cart').hide();
+            $('.empty-cart').show();
         }
     });
 
