@@ -92,7 +92,6 @@ main {
 .btn {
   text-decoration: none;
   padding: 0 5px;
-  width: 220px;
   height: 50px;
   max-width: 100%;
   display: flex;
@@ -101,19 +100,20 @@ main {
   text-align: center;
   cursor: pointer;
   transition: linear 0.2s;
-  font-weight: 400;
+  font-weight: 500;
   font-size: 16px;
   line-height: 19px;
+  border: 1px solid $main;
+  background-color: $main;
   color: #fff;
   border-radius: 30px;
   box-shadow: none;
   outline: none !important;
   position: relative;
-  @include bp(xs) {
-    width: 192px;
-    height: 40px;
-    font-size: 14px;
-    line-height: 17px;
+  &-sm{
+    height: 35px;
+    font-size: 12px;
+    line-height: 14px;
   }
   &:focus {
     text-decoration: none;
@@ -124,7 +124,16 @@ main {
     text-decoration: none;
     outline: none;
     box-shadow: none;
-    color: #fff;
+    background-color: transparent;
+    color: $main;
+  }
+  &-tr{
+    background-color: transparent;
+    color: $main;
+    &:hover {
+      background-color: $main;
+      color: #fff;
+    }
   }
 }
 
