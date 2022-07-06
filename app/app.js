@@ -191,6 +191,14 @@ $(function() {
         }
     });
 
+    // tabs
+
+    $('.tabs').on('click', 'li:not(.active)', function() {
+        $(this)
+            .addClass('active').siblings().removeClass('active')
+            .closest('.tabs-wrapper').find('.tabs-content').removeClass('active').eq($(this).index()).addClass('active');
+    });
+
     // select
 
   /*$('.select').SumoSelect({
@@ -284,14 +292,6 @@ $(function() {
     if ($(window).width() > 991) {
       $('body').removeClass('filters-opened');
     }
-  });
-
-    // tabs
-
-  $('.tabs').on('click', 'li:not(.active)', function() {
-    $(this)
-            .addClass('active').siblings().removeClass('active')
-            .closest('.tabs-wrapper').find('.tabs-content').removeClass('active').eq($(this).index()).addClass('active');
   });
 
     // map

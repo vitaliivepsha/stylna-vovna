@@ -1,0 +1,53 @@
+.related-section{
+  padding-top: 40px;
+}
+
+.related-tabs{
+  display: flex;
+  li{
+    cursor: pointer;
+    margin-right: 8px;
+    width: max-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 38px;
+    padding: 0 16px;
+    font-size: 21px;
+    line-height: 24px;
+    font-family: $title;
+    color: $brown;
+    border: 1px solid transparent;
+    transition: linear .2s;
+    border-radius: 100px;
+    &:hover{
+      border-color: $brown;
+    }
+    &.active{
+      border-color: rgba($main, .8);
+      color: $main;
+    }
+    &:last-child{
+      margin-right: 0;
+    }
+  }
+}
+
+.related-content{
+  margin: 0 -10px;
+}
+
+.related-slider{
+  .slick-list{
+    overflow: visible;
+  }
+  .slick-slide{
+    opacity: 1;
+    &:not(.slick-active){
+      opacity: 0;
+    }
+  }
+  .slide{
+    padding: 0 10px;
+  }
+}

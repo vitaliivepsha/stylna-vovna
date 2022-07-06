@@ -91,7 +91,7 @@ main {
 
 .btn {
   text-decoration: none;
-  padding: 0 5px;
+  padding: 0 15px;
   height: 50px;
   max-width: 100%;
   display: flex;
@@ -259,6 +259,9 @@ textarea:-webkit-autofill:hover {
 
 // Footer
 @import "footer";
+
+// Elements
+@import "product";
 
 // Pages
 @import "contacts";
