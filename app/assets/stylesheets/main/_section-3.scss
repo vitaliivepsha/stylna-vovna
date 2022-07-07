@@ -1,5 +1,14 @@
 .related-section{
   padding-top: 40px;
+  padding-bottom: 40px;
+  z-index: 2;
+}
+
+.related-top{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
 }
 
 .related-tabs{
@@ -30,6 +39,45 @@
     &:last-child{
       margin-right: 0;
     }
+  }
+}
+
+.related-nav{
+  display: flex;
+  align-items: center;
+  margin-right: -6px;
+}
+
+.related-arrow{
+  height: 26px;
+  width: 26px;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  transition: linear .2s;
+  cursor: pointer;
+  padding: 6px;
+  svg{
+    min-width: 26px;
+    path{
+      fill: $main;
+    }
+  }
+  &:hover{
+    width: 38px;
+  }
+  &.slick-disabled{
+    &:hover{
+      width: 26px;
+    }
+  }
+  &.related-slider__prev{
+    justify-content: flex-start;
+    border-right: 6px solid #fff;
+  }
+  &.related-slider__next{
+    justify-content: flex-end;
+    border-left: 6px solid #fff;
   }
 }
 
