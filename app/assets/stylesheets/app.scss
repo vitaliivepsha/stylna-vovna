@@ -243,11 +243,31 @@ textarea:-webkit-autofill:hover {
   text-shadow: none;
 }
 
+.page-title {
+  margin: 0;
+  font-family: $title;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 42px;
+  text-transform: uppercase;
+  color: $main;
+  @media (max-width: 991px) {
+    font-size: 28px;
+    line-height: 32px;
+  }
+}
+
 // Header
 @import "header";
 
 // Popup
 @import "popup";
+
+// Breadcrumbs
+@import "breadcrumbs";
+
+// Page links
+@import "page-links";
 
 // Main
 @import "main/section-1";
@@ -264,6 +284,8 @@ textarea:-webkit-autofill:hover {
 @import "product";
 
 // Pages
+@import "faq";
+
 @import "contacts";
 @import "404";
 @import "about";

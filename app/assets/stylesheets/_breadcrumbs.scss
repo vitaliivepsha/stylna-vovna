@@ -1,0 +1,87 @@
+.breadcrumbs {
+  padding-top: 23px;
+  padding-bottom: 13px;
+  font-size: 12px;
+  line-height: 140%;
+  color: $main;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+
+  @media (max-width: 574px) {
+    font-size: 10px;
+  }
+
+  a {
+    color: rgba($main, .5);
+    text-decoration: none;
+    font-size: 12px;
+    line-height: 140%;
+    white-space: nowrap;
+    cursor: pointer;
+
+    @media (max-width: 574px) {
+      font-size: 10px;
+    }
+
+    &:hover,
+    &:focus {
+      color: $red;
+      text-decoration: none;
+
+      &:before {
+        color: rgba($main, .5);
+      }
+    }
+
+    &:before {
+      content: '/';
+      display: inline-block;
+      vertical-align: middle;
+      margin: 0 4px 0 2px;
+      position: relative;
+      transition: linear .2s;
+      color: rgba($main, .5);
+    }
+
+    &:first-child {
+      &:before {
+        display: none;
+      }
+    }
+  }
+
+  span {
+    font-size: 12px;
+    line-height: 140%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    cursor: default;
+
+    @media (max-width: 574px) {
+      font-size: 10px;
+    }
+
+    &:before {
+      content: '/';
+      display: inline-block;
+      vertical-align: middle;
+      margin: 0 4px 0 2px;
+      position: relative;
+      font-size: 12px;
+      line-height: 140%;
+      color: rgba($main, .5);
+
+      @media (max-width: 574px) {
+        font-size: 10px;
+      }
+    }
+
+    &:first-child {
+      &:before {
+        color: rgba($main, 0.5);
+      }
+    }
+  }
+}
