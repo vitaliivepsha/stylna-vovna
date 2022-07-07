@@ -1,0 +1,231 @@
+.article-date {
+  display: block;
+  margin-top: 11px;
+  margin-bottom: 17px;
+  font-size: 14px;
+  line-height: 16px;
+
+  @media (max-width: 767px) {
+    font-size: 12px;
+    line-height: 14px;
+  }
+}
+
+.article-pic {
+  margin-bottom: 50px;
+  border-radius: 10px;
+  overflow: hidden;
+
+  @media (max-width: 574px) {
+    margin-bottom: 20px;
+  }
+
+  & picture {
+    width: 100%;
+    height: 100%;
+
+    & img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  & .article-pic__desc {
+    display: block;
+
+    @media (max-width: 574px) {
+      display: none;
+    }
+  }
+
+  & .article-pic__mob {
+    display: none;
+
+    @media (max-width: 574px) {
+      display: block;
+    }
+  }
+}
+
+.article-text {
+  max-width: 940px;
+  margin: 0 auto;
+  padding-bottom: 110px;
+
+  @media (max-width: 767px) {
+    padding-bottom: 40px;
+  }
+
+  & h1,
+  h2,
+  h3,
+  h4 {
+    margin: 0;
+    margin-top: 20px;
+    margin-bottom: 14px;
+    font-size: 22px;
+    line-height: 140%;
+  }
+
+  & p,
+  span,
+  b,
+  ul {
+    display: block;
+    margin: 0;
+    margin-bottom: 14px;
+    font-size: 16px;
+    line-height: 140%;
+  }
+
+  & ul {
+    list-style-type: disc;
+    margin-left: 30px;
+    font-size: 16px;
+    line-height: 140%;
+  }
+
+  & li {
+    margin-bottom: 8px;
+    font-size: 16px;
+    line-height: 140%;
+  }
+}
+
+.last-articles {
+  padding-top: 37px;
+  padding-bottom: 150px;
+  border-top: 1px solid rgba(170, 167, 178, 0.3);
+
+  @media (max-width: 767px) {
+    padding-top: 27px;
+    padding-bottom: 43px;
+  }
+}
+
+.last-articles__title {
+  display: block;
+  max-width: 1206px;
+  margin: 0 auto;
+  margin-bottom: 33px;
+  font-family: $title;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 28px;
+  text-transform: uppercase;
+
+  @media (max-width: 767px) {
+    margin-bottom: 24px;
+    font-size: 21px;
+    line-height: 24px;
+  }
+}
+
+.last-articles__list {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  max-width: 1180px;
+  margin: 0 auto;
+  @media (max-width: 991px) {
+    gap: 14px;
+  }
+  @media (max-width: 767px) {
+    flex-wrap: wrap;
+  }
+}
+
+.last-articles-item {
+  display: flex;
+  gap: 20px;
+  text-decoration: none !important;
+  color: $main;
+  @media (max-width: 991px) {
+      gap: 10px; 
+      flex-wrap: wrap;
+    }
+    @media (max-width: 767px) {
+    flex-wrap: nowrap;
+    }
+}
+
+.last-articles-item__pic {
+  flex-shrink: 0;
+  max-width: 220px;
+  border-radius: 10px;
+    overflow: hidden;
+@media (max-width: 480px) {
+  max-width: 140px;
+  height: 140px;
+}
+  & picture {
+    width: 100%;
+    height: 100%;
+    & img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      object-position: top;
+      @media (max-width: 991px) {
+          object-position: center;
+          object-fit: cover;
+        }
+        @media (max-width: 767px) {
+          object-fit: cover;
+            object-position: top;
+        }
+    }
+  }
+}
+
+.last-articles-item__about {
+  margin-top: 14px;
+  @media (max-width: 991px) {
+      margin-top: 10px;
+    }
+    @media (max-width: 480px) {
+      margin-top: 3px;
+    }
+}
+
+.last-articles-item__about-date {
+  display: block;
+  margin-bottom: 6px;
+  font-size: 14px;
+    line-height: 16px;
+    @media (max-width: 991px) {
+      font-size: 12px;
+        line-height: 14px;
+    }
+    
+}
+
+.last-articles-item__about-title {
+  display: block;
+  margin-bottom: 10px;
+font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  @media (max-width: 991px) {
+      font-size: 14px;
+      line-height: 16px;
+    }
+    @media (max-width: 480px) {
+      margin-bottom: 6px;
+    }
+}
+
+.last-articles-item__about-text {
+  font-size: 14px;
+    line-height: 140%;
+    @media (max-width: 991px) {
+        font-size: 12px;
+      }
+      @media (max-width: 480px) {
+          display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+      }
+}

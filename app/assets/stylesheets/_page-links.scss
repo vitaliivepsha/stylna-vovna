@@ -36,6 +36,14 @@
   }
 }
 
+.links-section--about {
+  margin-bottom: 130px;
+
+    @media (max-width: 574px) {
+      margin-bottom: 57px;
+    }
+}
+
 .page-link {
   display: flex;
   flex-direction: column;

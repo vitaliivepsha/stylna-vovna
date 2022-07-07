@@ -269,6 +269,9 @@ textarea:-webkit-autofill:hover {
 // Page links
 @import "page-links";
 
+// Consalt
+@import "consult";
+
 // Main
 @import "main/section-1";
 @import "main/section-2";
@@ -285,6 +288,7 @@ textarea:-webkit-autofill:hover {
 
 // Pages
 @import "faq";
+@import "article";
 
 @import "contacts";
 @import "404";
