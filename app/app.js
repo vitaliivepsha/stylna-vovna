@@ -7,6 +7,7 @@ if (process.env.NODE_ENV !== 'production') {
   require('./assets/templates/layouts/contacts.html');
   require('./assets/templates/layouts/404.html');
   require('./assets/templates/layouts/about.html');
+  require('./assets/templates/layouts/faq.html');
 }
 
 // Depends
@@ -375,4 +376,14 @@ $(function() {
       });
     }
   });
+});
+
+// faq
+$('.faq-head').click(function () {
+    $(this).toggleClass('active').next().slideToggle();
+    $('.faq-head').not(this).removeClass('active').next().slideUp();
+    if ($('.faq-head').has('.active')) {
+        $(this).closest($('.faq-item')).toggleClass('active');
+        $('.faq-head').not(this).closest($('.faq-item')).removeClass('active');
+    }
 });
