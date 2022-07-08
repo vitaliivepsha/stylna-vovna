@@ -59,6 +59,7 @@ svg {
 main {
   flex: 1 0 auto;
   position: relative;
+  overflow: hidden;
 }
 
 .section {
@@ -75,7 +76,7 @@ main {
 }
 
 .container{
-  width: 1470px;
+  width: 1450px;
   max-width: calc(100vw - 60px);
   @include bp(lg) {
     width: 1170px;
