@@ -21,6 +21,13 @@ body {
   @include bp(md) {
     display: block;
   }
+
+  &.overflow {
+    & .main {
+      overflow: hidden;
+    }
+    
+  }
 }
 
 ol,
@@ -59,7 +66,6 @@ svg {
 main {
   flex: 1 0 auto;
   position: relative;
-  overflow: hidden;
 }
 
 .section {
@@ -270,6 +276,9 @@ textarea:-webkit-autofill:hover {
 // Page links
 @import "page-links";
 
+// Page showroom
+@import "page-showroom";
+
 // Consalt
 @import "consult";
 
@@ -290,7 +299,8 @@ textarea:-webkit-autofill:hover {
 // Pages
 @import "faq";
 @import "article";
-
 @import "contacts";
 @import "404";
 @import "about";
+@import "blog";
+

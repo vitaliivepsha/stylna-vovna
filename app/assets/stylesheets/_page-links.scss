@@ -1,3 +1,21 @@
+// ========================
+.links-section--faq {
+  margin-bottom: 64px;
+
+  @media (max-width: 574px) {
+    margin-bottom: 57px;
+  }
+}
+
+.links-section--about {
+  margin-bottom: 130px;
+
+  @media (max-width: 574px) {
+    margin-bottom: 50px;
+  }
+}
+// ==========================
+
 .links-section {
   & .row {
     display: flex;
@@ -31,21 +49,6 @@
       }
     }
   }
-}
-
-.links-section--faq {
-  margin-bottom: 64px;
-  @media (max-width: 574px) {
-    margin-bottom: 57px;
-  }
-}
-
-.links-section--about {
-  margin-bottom: 130px;
-
-    @media (max-width: 574px) {
-          margin-bottom: 50px;
-    }
 }
 
 .page-link {

@@ -9,6 +9,7 @@ if (process.env.NODE_ENV !== 'production') {
     require('./assets/templates/layouts/about.html');
     require('./assets/templates/layouts/faq.html');
     require('./assets/templates/layouts/article.html');
+    require('./assets/templates/layouts/blog.html');
 }
 
 // Depends
@@ -195,7 +196,7 @@ $(function () {
 
     // tabs
 
-    $('.tabs').on('click', 'li:not(.active)', function() {
+    $('.tabs').on('click', 'li:not(.active)', function () {
         $(this)
             .addClass('active').siblings().removeClass('active')
             .closest('.tabs-wrapper').find('.tabs-content').removeClass('active').eq($(this).index()).addClass('active');
@@ -203,7 +204,7 @@ $(function () {
         $('.slick-slider').slick('setPosition');
     });
 
-    $('.related-tabs').on('click', 'li:not(.active)', function() {
+    $('.related-tabs').on('click', 'li:not(.active)', function () {
         $(this)
             .addClass('active').siblings().removeClass('active')
             .closest('.related-tabs__wrapper').find('.related-content').removeClass('active').eq($(this).index()).addClass('active');
