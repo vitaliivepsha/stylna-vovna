@@ -6,11 +6,13 @@
 .collection-wrapper{
   display: flex;
   flex-wrap: wrap;
+  margin: 0 -10px;
 }
 
 .collection-left{
   display: flex;
   justify-content: flex-end;
+  padding: 0 10px;
   picture{
     width: 533px;
     height: 591px;
@@ -26,6 +28,7 @@
 .collection-right{
   padding-top: 77px;
   padding-left: 49px;
+  padding-right: 10px;
   position: relative;
   &:before{
     position: absolute;
