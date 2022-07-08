@@ -144,6 +144,8 @@
   }
 
     & .page-link__arrow-desc {
+      position: relative;
+      top: -2px;
       @media (max-width: 574px) {
         display: none;
       }

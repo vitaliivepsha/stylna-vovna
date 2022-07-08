@@ -13,7 +13,7 @@
       border-radius: 0 100% 100% 0 / 0 50% 50% 0;
       background: $beige;
       top: -86px;
-      left: -69px;
+      left: -64px;
     }
   }
 }
@@ -23,10 +23,12 @@
   flex-wrap: wrap;
   position: relative;
   z-index: 1;
+  margin: 0 -10px;
 }
 
 .about-text{
   padding-left: 120px;
+  padding-right: 10px;
   .btn{
     width: 222px;
   }
@@ -63,6 +65,7 @@
 }
 
 .about-pics{
+  padding: 0 10px;
   display: flex;
   justify-content: flex-end;
 }

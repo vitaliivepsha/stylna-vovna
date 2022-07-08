@@ -1,0 +1,46 @@
+.rating > input ~ label {
+  cursor: pointer;
+}
+
+.rating > input {
+  display: none;
+}
+
+.rating > label svg {
+  display: block;
+}
+
+.rating > label {
+  float: right;
+  padding-right: 5px;
+  margin-bottom: 0;
+}
+
+.rating:not(:checked) > label:hover svg,
+.rating:not(:checked) > label:hover ~ label svg,
+.rating > input:checked + label:hover svg,
+.rating > input:checked ~ label svg,
+.rating > input:checked ~ label:hover svg,
+.rating > input:checked ~ label:hover ~ label svg,
+.rating > label:hover ~ input:checked ~ label svg {
+  fill: $red;
+}
+
+.rating > input:checked ~ label svg {
+  fill: $red;
+}
+
+.rating-stars {
+  display: flex;
+  align-items: center;
+}
+
+.rating-star {
+  margin-right: 5px;
+  display: flex;
+  &.active {
+    svg {
+      fill: $red;
+    }
+  }
+}
