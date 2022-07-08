@@ -269,7 +269,7 @@ textarea:-webkit-autofill:hover {
 // Page links
 @import "page-links";
 
-// Consalt
+// Consult
 @import "consult";
 
 // Main
@@ -279,12 +279,15 @@ textarea:-webkit-autofill:hover {
 @import "main/section-4";
 @import "main/section-5";
 @import "main/section-6";
+@import "main/section-7";
+@import "main/section-8";
 
 // Footer
 @import "footer";
 
 // Elements
 @import "product";
+@import "rating";
 
 // Pages
 @import "faq";
