@@ -1,5 +1,6 @@
 .about-section{
   padding-top: 65px;
+  padding-bottom: 80px;
   .container{
     position: relative;
     &:before{
@@ -67,5 +68,34 @@
 }
 
 .about-pic__main{
+  width: 533px;
+  height: 591px;
+  position: relative;
+  margin-top: -27px;
+  picture{
+    width: 100%;
+    height: 100%;
+    img{
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+}
 
+.about-pic__additional{
+  position: absolute;
+  width: 275px;
+  height: 372px;
+  top: 145px;
+  left: -151px;
+  picture{
+    width: 100%;
+    height: 100%;
+    img{
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+  }
 }

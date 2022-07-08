@@ -43,9 +43,12 @@
 }
 
 .related-nav{
-  display: flex;
+  display: none;
   align-items: center;
   margin-right: -6px;
+  &.active{
+    display: flex;
+  }
 }
 
 .related-arrow{
@@ -83,11 +86,18 @@
 
 .related-content{
   margin: 0 -10px;
+  display: none;
+  &.active{
+    display: block;
+  }
 }
 
 .related-slider{
   .slick-list{
     overflow: visible;
+  }
+  .slick-track{
+    margin-left: 0;
   }
   .slick-slide{
     opacity: 1;

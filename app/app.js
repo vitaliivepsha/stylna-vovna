@@ -195,10 +195,22 @@ $(function () {
 
     // tabs
 
-    $('.tabs').on('click', 'li:not(.active)', function () {
+    $('.tabs').on('click', 'li:not(.active)', function() {
         $(this)
             .addClass('active').siblings().removeClass('active')
             .closest('.tabs-wrapper').find('.tabs-content').removeClass('active').eq($(this).index()).addClass('active');
+        $(window).trigger('resize');
+        $('.slick-slider').slick('setPosition');
+    });
+
+    $('.related-tabs').on('click', 'li:not(.active)', function() {
+        $(this)
+            .addClass('active').siblings().removeClass('active')
+            .closest('.related-tabs__wrapper').find('.related-content').removeClass('active').eq($(this).index()).addClass('active');
+        $(this)
+            .closest('.related-tabs__wrapper').find('.related-nav').removeClass('active').eq($(this).index()).addClass('active');
+        $(window).trigger('resize');
+        $('.slick-slider').slick('setPosition');
     });
 
     // select
