@@ -1,16 +1,23 @@
 .about-us-section {
-  margin-top: 30px;
-
-  & .container {
+      margin-top: 37px;
+@media (max-width: 767px) {
+  margin-top: 28px;
+}
+  & .about-us__wrapper {
     display: flex;
     justify-content: space-between;
     position: relative;
+    margin-bottom: 122px;
+   @media (max-width: 991px) {
+    display: block;
+    margin-bottom: 58px;
+   }
 
     &:before {
       content: '';
       position: absolute;
-      top: 4px;
-      left: -556px;
+      top: 17px;
+        left: -540px;
       z-index: -1;
       display: block;
       width: 864px;
@@ -18,20 +25,28 @@
       border-radius: 50%;
       background-color: #F2F5FD;
       pointer-events: none;
+      @media (max-width: 991px) {
+        top: -138px;
+        left: -738px;
+      }
     }
 
     &:after {
-      display: block;
-      position: absolute;
       content: '';
+      top: 255px;
+      right: -78px;
+      position: absolute;
       z-index: -1;
+      display: block;
       width: 299px;
       height: 597px;
       border-radius: 0 100% 100% 0 / 0 50% 50% 0;
       transform: scale(-1, 1);
       background: #FBEEE6;
-      top: 209px;
-      right: -69px;
+      @media (max-width: 767px) {
+            top: 723px;
+              right: -173px;
+      }
     }
   }
 }
@@ -39,20 +54,44 @@
 
 .about-us__text {
   max-width: 700px;
-  padding-bottom: 122px;
+    margin-right: 20px;
+    @media (max-width: 991px) {
+      max-width: 100%;
+      margin-right: 0;
+      margin-bottom: 28px;
+    }
+  & p{
+    margin: 0;
+    font-weight: 400;
+      font-size: 16px;
+      line-height: 140%;
+      margin-bottom: 30px;
+      @media (max-width: 991px) {
+        font-size: 14px;
+      }
+  }
+
+    & p+p {
+      margin-top: 20px;
+    }
 
   & ul {
     padding-left: 11px;
+    margin-bottom: 20px;
   }
 
   & li {
     display: flex;
-    margin-bottom: 32px;
+    margin-bottom: 22px;
     font-weight: 400;
     font-size: 16px;
     line-height: 140%;
     font-weight: 400;
     font-size: 16px;
+    @media (max-width: 991px) {
+      margin-bottom: 15px;
+      font-size: 14px;
+    }
 
     &::before {
       content: "";
@@ -67,10 +106,17 @@
 }
 
 .about-us__pic {
-  max-width: 628px;
-  margin-top: -86px;
-  padding-bottom: 122px;
-  padding-left: 20px;
+  flex-shrink: 0;
+  max-width: 628px ;
+  margin-top: -84px;
+  @media (max-width: 1299px) {
+    flex-shrink: 1;
+    padding: 0 8px;
+  }
+  @media (max-width: 991px) {
+    margin: 0 auto;
+    margin-top: 0;
+  }
   & picture {
     width: 100%;
     height: 100%;
@@ -82,3 +128,4 @@
     }
   }
 }
+
