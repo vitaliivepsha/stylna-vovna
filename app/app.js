@@ -10,6 +10,8 @@ if (process.env.NODE_ENV !== 'production') {
     require('./assets/templates/layouts/faq.html');
     require('./assets/templates/layouts/article.html');
     require('./assets/templates/layouts/blog.html');
+    require('./assets/templates/layouts/return-change.html');
+    require('./assets/templates/layouts/delivery-payment.html');
 }
 
 // Depends
@@ -400,4 +402,11 @@ $('.faq-head').click(function () {
         $(this).closest($('.faq-item')).toggleClass('active');
         $('.faq-head').not(this).closest($('.faq-item')).removeClass('active');
     }
+});
+
+// spoiler
+
+$(".spoiler-content").hide();
+$('.spoiler-title').click(function () {
+    $(this).toggleClass('active').next('.spoiler-content').slideToggle();
 });

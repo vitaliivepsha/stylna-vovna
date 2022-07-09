@@ -232,16 +232,12 @@
 
 .blog-articles-item__about-text {
   font-size: 14px;
-  line-height: 140%;
-
-  @media (max-width: 991px) {
-    font-size: 12px;
-  }
-
-  @media (max-width: 480px) {
-    display: -webkit-box;
+  line-height: 140%;display: -webkit-box;
     -webkit-line-clamp: 3;
     -webkit-box-orient: vertical;
     overflow: hidden;
+
+  @media (max-width: 991px) {
+    font-size: 12px;
   }
 }

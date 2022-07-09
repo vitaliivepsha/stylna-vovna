@@ -273,6 +273,9 @@ textarea:-webkit-autofill:hover {
 // Breadcrumbs
 @import "breadcrumbs";
 
+// Pagination
+@import "pagination";
+
 // Page links
 @import "page-links";
 
@@ -308,4 +311,6 @@ textarea:-webkit-autofill:hover {
 @import "404";
 @import "about";
 @import "blog";
+@import "change";
+
 
