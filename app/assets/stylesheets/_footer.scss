@@ -14,7 +14,7 @@
     text-align: left;
     color: #fff;
     font-size: 14px;
-      line-height: 20px;
+    line-height: 20px;
 
     &:hover,
     &:focus {
@@ -31,10 +31,15 @@
       display: flex;
       padding-left: 214px;
 
+      @media (max-width: 1300px) {
+        padding-left: 15px;
+        margin-bottom: 36px;
+      }
+
       &>a {
         display: block;
         font-size: 14px;
-          line-height: 16px;
+        line-height: 16px;
 
         &+a {
           margin-top: 30px;
@@ -42,14 +47,40 @@
       }
     }
 
+    & .col-xs-12 {
+      @media (max-width: 480px) {
+        padding-left: 15px;
+        margin-bottom: 36px;
+      }
+
+    }
+
     & .col-md-2 {
+      @media (max-width: 480px) {
+        width: 100%;
+        margin-left: 15px;
+        padding-left: 0;
+      }
 
       &+.col-md-2 {
         padding-left: 20px;
+
+        @media (max-width: 1300px) {
+          padding-left: 0;
+        }
+
+        @media (max-width: 480px) {
+          margin-top: 36px;
+        }
+
       }
 
       &+.col-md-2+.col-md-2 {
         padding-left: 36px;
+
+        @media (max-width: 1300px) {
+          padding-left: 0;
+        }
       }
 
       &>a {
@@ -90,7 +121,7 @@
   display: flex;
   gap: 10px;
   font-size: 14px;
-    line-height: 16px;
+  line-height: 16px;
 
   & a {
     display: flex;
@@ -105,16 +136,19 @@
 
 .footer-drop {
   margin-bottom: 10px;
+
   &.active {
     & svg {
       transform: scale(1, -1);
 
     }
   }
+
   & span {
-  font-size: 14px;
+    font-size: 14px;
     line-height: 20px;
     cursor: pointer;
+
     &.active {
       & svg {
         transform: scale(1, -1);
@@ -157,12 +191,20 @@
 
 }
 
-// ]]]]]]]]]]]]
-
 .footer-bot {
   margin-top: 28px;
-  font-size: 12px;
-  line-height: 140%;
+ 
   opacity: 0.5;
   padding-left: 200px;
+  & span {
+     font-size: 12px;
+  line-height: 140%;
+  }
+
+  @media (max-width: 1300px) {
+    padding-left: 0;
+  }
+  @media (max-width: 480px) {
+    margin-top: 15px;
+  }
 }
