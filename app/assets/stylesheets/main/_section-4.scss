@@ -29,6 +29,12 @@
 .about-text{
   padding-left: 120px;
   padding-right: 10px;
+  @media only screen and (max-width: 1359px) {
+    padding-left: 60px;
+  }
+  @include bp(lg) {
+    padding-left: 15px;
+  }
   .btn{
     width: 222px;
   }
@@ -59,6 +65,9 @@
   font-size: 14px;
   line-height: 140%;
   margin-bottom: 46px;
+  @include bp(xxl) {
+    max-width: 430px;
+  }
   p{
     margin-bottom: 5px;
   }
@@ -92,6 +101,9 @@
   height: 372px;
   top: 145px;
   left: -151px;
+  @include bp(lg) {
+    display: none;
+  }
   picture{
     width: 100%;
     height: 100%;

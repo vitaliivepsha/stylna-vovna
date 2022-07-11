@@ -311,40 +311,6 @@ $(function () {
         }
     });
 
-    // map
-
-    $('.city').mousedown(function (e) {
-        e.stopPropagation();
-        var map = $('.map-wrapper'),
-            dot = $(this).find('circle'),
-            left = dot.offset().left - map.offset().left,
-            top = dot.offset().top - map.offset().top;
-        $(this).addClass('active').siblings().removeClass('active')
-            .closest('.map-wrapper').find('.title').removeClass('active').eq($(this).index()).addClass('active')
-            .closest('.distributors-wrapper').find('.distributors-info').removeClass('active').eq($(this).index()).addClass('active');
-        $('.map-wrapper .title.active').each(function () {
-            var title_pos = $(this).width() + 28;
-            $(this).css({ 'left': left + 3 - title_pos / 2, 'top': top - 25 });
-        });
-    });
-
-    $('.map-cities__list').on('click', 'li', function (e) {
-        var city_name = $(this).html();
-        $(this).addClass('active').siblings().removeClass('active');
-        $(this).closest('.map-cities__wrapper').find('.map-cities__title').html(city_name);
-    });
-
-    $('.distributors-info__head').on('click', function () {
-        $(this).toggleClass('opened').next('.distributors-info__body').slideToggle();
-    });
-
-    $(window).resize(function () {
-        if ($(window).width() > 574) {
-            $('.distributors-info__head').removeClass('opened');
-            $('.distributors-info__body').removeAttr('style');
-        }
-    });
-
     // lazy load
     var lazyload = function () {
         var scroll = $(window).scrollTop() + $(window).height() * 3;
@@ -363,35 +329,6 @@ $(function () {
         });
     };
     $(window).scroll(lazyload);
-
-    // zoom product
-
-    $(window).resize(function () {
-        if ($(window).width() > 991) {
-            $('.zoom-pic').ezPlus({
-                borderSize: 0,
-                easing: false,
-                zoomWindowFadeIn: 300,
-                zoomWindowFadeOut: 300,
-                lensFadeIn: 300,
-                lensFadeOut: 300,
-                zoomWindowHeight: 500,
-                zoomWindowWidth: 680
-            });
-        }
-        else {
-            $('.zoom-pic').ezPlus({
-                zoomType: 'inner',
-                cursor: 'crosshair',
-                borderSize: 0,
-                zoomWindowHeight: 600,
-                zoomWindowFadeIn: 300,
-                zoomWindowFadeOut: 300,
-                lensFadeIn: 300,
-                lensFadeOut: 300,
-            });
-        }
-    });
 });
 
 // faq
