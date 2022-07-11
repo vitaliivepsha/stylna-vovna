@@ -52,8 +52,13 @@
     line-height: 28px;
     text-transform: uppercase;
     color: $main;
+		pointer-events: none;
+		@media (max-width: 768px) {
+			pointer-events: all;
+		}
     &.spoiler-title {
       cursor: pointer;
+
       & i {
         transition: transform linear 0.4s;
       }
