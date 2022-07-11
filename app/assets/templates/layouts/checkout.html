@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex">
+  <title>Stylna Vovna</title>
+  <link rel="icon" href="../../images/favicon.ico" type="image/x-icon">
+  <link rel="apple-touch-icon" sizes="180x180" href="../../images/favicon.png" type="image/png">
+  <meta name="theme-color" content="#7A6DA6">
+  <meta name="msapplication-navbutton-color" content="#7A6DA6">
+  <meta name="apple-mobile-web-app-status-bar-style" content="#7A6DA6">
+</head>
+
+<body>
+  ${require('../parts/header.html')}
+  <main class="main">
+    <div class="container">
+      <div class="breadcrumbs">
+        <a href="javascript:void(0)">Главная</a>
+        <span>Оформление заказа</span>
+      </div>
+    </div>
+    <div class="container">
+      <h1 class="page-title">Оформление заказа</h1>
+    </div>
+    <div class="checkout">
+      <div class="container">
+
+        <div class="row">
+          <div class="col-lg-4 col-md-5  col-sm-5 col-xs-12">
+            <div class="checkout-order">
+              <p class="checkout-title">
+                Ваши данные
+              </p>
+              <div class="checkout-form">
+                <form class="chechout-form ajax_form clear-styles">
+                  <div class="input-wrapper">
+                    <label>ФИО<span>*</span></label>
+                    <input class="input" type="text" name="full-name" data-title="ФИО"
+                      data-validate-required="Обязательное поле" placeholder="Иванов Иван Иванович">
+                  </div>
+                  <div class="input-wrapper">
+                    <label>E-mail</label>
+                    <input class="input" type="text" name="email" data-title="Email" placeholder="email@domail.com">
+                  </div>
+                  <div class="input-wrapper">
+                    <label>Ваш телефон<span>*</span></label>
+                    <input class="input" type="text" name="phone" data-title="Телефон"
+                      data-validate-required="Обязательное поле" data-validate-uaphone="Неправильный номер"
+                      placeholder="+38 (__) ___ __ __">
+                  </div>
+                  <div class="input-wrapper">
+                    <label>Способ доставки</label>
+                    <select class="select delivery">
+                      <option selected value="self">Самовывоз</option>
+                      <option value="nova">Новая почта</option>
+                      <option value="courier">Курьером</option>
+                    </select>
+                  </div>
+                  <div class="deliver deliver-nova">
+                    <div class="input-wrapper">
+                      <label>Область</label>
+                      <select class="select obl">
+                        <option disabled selected>Выберите область</option>
+                        <option>Область 1</option>
+                        <option>Область 2</option>
+                        <option>Область 3</option>
+                        <option>Область 3</option>
+                        <option>Область 4</option>
+                        <option>Область 5</option>
+                        <option>Область 6</option>
+                      </select>
+                    </div>
+                    <div class="input-wrapper">
+                      <label>Город</label>
+                      <select class="select obl">
+                        <option disabled selected>Выберите город</option>
+                        <option>Город 1</option>
+                        <option>Город 2</option>
+                        <option>Город 3</option>
+                        <option>Город 4</option>
+                        <option>Город 5</option>
+                        <option>Город 6</option>
+                        <option>Город 7</option>
+                        <option>Город 8</option>
+                        <option>Город 9</option>
+                        <option>Город 10</option>
+                        <option>Город 11</option>
+                        <option>Город 12</option>
+                      </select>
+                    </div>
+                    <div class="input-wrapper">
+                      <label>Отделение</label>
+                      <select class="select obl">
+                        <option disabled selected>Выберите отделение</option>
+                        <option>Отделение 1</option>
+                        <option>Отделение 2</option>
+                        <option>Отделение 3</option>
+                        <option>Отделение 4</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="deliver deliver-courier">
+                    <div class="input-wrapper">
+                      <label>Область</label>
+                      <select class="select obl">
+                        <option disabled selected>Выберите область</option>
+                        <option>Харьковская область</option>
+                        <option>Днепропетровская область</option>
+                        <option>Закарпатская область</option>
+                        <option>Киевская область</option>
+                        <option>Луганская область</option>
+                        <option>Одесская область</option>
+                        <option>Сумская область</option>
+                        <option>Херсонская область</option>
+                      </select>
+                    </div>
+                    <div class="input-wrapper">
+                      <label>Город</label>
+                      <select class="select obl">
+                        <option disabled selected>Выберите город</option>
+                        <option>Харьков</option>
+                        <option>Киев</option>
+                        <option>Днепр</option>
+                        <option>Кривой Рог</option>
+                        <option>Город 5</option>
+                        <option>Город 6</option>
+                        <option>Город 7</option>
+                        <option>Город 8</option>
+                        <option>Город 9</option>
+                        <option>Город 10</option>
+                        <option>Город 11</option>
+                        <option>Город 12</option>
+                      </select>
+                    </div>
+                    <div class="input-wrapper">
+                      <label>Улица</label>
+                      <input class="input" type="text" name="country" data-title="Улица" placeholder="Улица">
+                    </div>
+                    <div class="input-wrapper">
+                      <label>Дом</label>
+                      <input class="input" type="text" name="house" data-title="Дом" placeholder="Дом">
+                    </div>
+                    <div class="input-wrapper">
+                      <label>Квартира</label>
+                      <input class="input" type="text" name="room" data-title="Квартира" placeholder="Квартира">
+                    </div>
+                  </div>
+                  <div class="input-wrapper">
+                    <label>Способ оплаты</label>
+                    <select class="select">
+                      <option selected>Наложенный платеж</option>
+                      <option>Оплата картой</option>
+                    </select>
+                  </div>
+                  <div class="input-wrapper chechout-comment">
+                    <label>Комментарий</label>
+                    <textarea class="textarea" name="message" data-title="Сообщение"
+                      placeholder="Ваш комментарий"></textarea>
+                  </div>
+                  <button class="checkout-btn btn btn-arrow" type="submit">
+                    <span>
+                      Оформить заказ
+                      <svg width="29" height="8" viewBox="0 0 29 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                          d="M28.6869 4.35355C28.8821 4.15829 28.8821 3.84171 28.6869 3.64644L25.5049 0.464464C25.3096 0.269202 24.9931 0.269202 24.7978 0.464464C24.6025 0.659726 24.6025 0.976309 24.7978 1.17157L27.6262 4L24.7978 6.82843C24.6025 7.02369 24.6025 7.34027 24.7978 7.53553C24.9931 7.73079 25.3096 7.73079 25.5049 7.53553L28.6869 4.35355ZM4.95396e-08 4.5L28.3333 4.5L28.3333 3.5L-4.95396e-08 3.5L4.95396e-08 4.5Z"
+                          fill="white" />
+                      </svg>
+                    </span>
+                  </button>
+
+                </form>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-8 col-md-7 col-sm-7 col-xs-12">
+            <div class="checkout-goods">
+              <p class="checkout-title spoiler-title">
+                Ваш заказ
+                <i>
+                  <svg width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12 6.04545L11.04 7L6 1.92182L0.96 7L8.32913e-08 6.04545L6 -5.24537e-07L12 6.04545Z"
+                      fill="#7A6DA6" />
+                  </svg>
+                </i>
+              </p>
+              <ul class="checkout-goods__list spoiler-content">
+                <li>
+                  <span class="checkout-goods__close">
+                    <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <rect width="10.0022" height="1.0922"
+                        transform="matrix(0.693285 -0.720664 0.693285 0.720664 3.38281 10.7822)" fill="#AAA7B2" />
+                      <rect width="10.0022" height="1.0922"
+                        transform="matrix(0.693285 0.720664 -0.693285 0.720664 4.49023 3.62109)" fill="#AAA7B2" />
+                      <circle cx="7.5" cy="7.5" r="7" stroke="#AAA7B2" />
+                    </svg>
+                  </span>
+                  <div class="checkout-goods__pic">
+                    <picture>
+                      <source srcset="../../images/pixel.webp" data-original="../../images/checkout-01.webp"
+                        class="lazy-web" type="image/webp">
+                      <source srcset="../../images/pixel.jpg" data-original="../../images/checkout-01.jpg"
+                        class="lazy-web" type="image/jpg">
+                      <img src="../../images/pixel.jpg" data-original="../../images/checkout-01.jpg" class="lazy"
+                        alt="">
+                    </picture>
+                  </div>
+                  <div class="checkout-goods__inner">
+                    <a href="javascript:void(0)" class="checkout-goods__name">
+                      Шуба Winter snoe whiteШуба
+                    </a>
+                    <div class="checkout-goods__details">
+                      <div class="checkout-goods__about">
+                        <div>
+                          <span>Цвет:</span>
+                          <b>Синий</b>
+                        </div>
+                        <div>
+                          <span>Размер:</span>
+                          <b>L</b>
+                        </div>
+                        <b>145960 грн</b>
+                      </div>
+                      <div class="checkout-goods__count">
+                        <div class="quantity">
+                          <button class="quantity-btn btn-minus" type="button">-</button>
+                          <input class="value" value="1" type="text">
+                          <button class="quantity-btn btn-plus" type="button">+</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <span class="checkout-goods__close">
+                    <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <rect width="10.0022" height="1.0922"
+                        transform="matrix(0.693285 -0.720664 0.693285 0.720664 3.38281 10.7822)" fill="#AAA7B2" />
+                      <rect width="10.0022" height="1.0922"
+                        transform="matrix(0.693285 0.720664 -0.693285 0.720664 4.49023 3.62109)" fill="#AAA7B2" />
+                      <circle cx="7.5" cy="7.5" r="7" stroke="#AAA7B2" />
+                    </svg>
+                  </span>
+                  <div class="checkout-goods__pic">
+                    <picture>
+                      <source srcset="../../images/pixel.webp" data-original="../../images/checkout-02.webp"
+                        class="lazy-web" type="image/webp">
+                      <source srcset="../../images/pixel.jpg" data-original="../../images/checkout-02.jpg"
+                        class="lazy-web" type="image/jpg">
+                      <img src="../../images/pixel.jpg" data-original="../../images/checkout-02.jpg" class="lazy"
+                        alt="">
+                    </picture>
+                  </div>
+                  <div class="checkout-goods__inner">
+                    <a href="javascript:void(0)" class="checkout-goods__name">
+                      Шуба Winter snoe whiteШуба
+                    </a>
+                    <div class="checkout-goods__details">
+                      <div class="checkout-goods__about">
+                        <div>
+                          <span>Цвет:</span>
+                          <b>Синий</b>
+                        </div>
+                        <div>
+                          <span>Размер:</span>
+                          <b>L</b>
+                        </div>
+                        <b>145960 грн</b>
+                      </div>
+                      <div class="checkout-goods__count">
+                        <div class="quantity">
+                          <button class="quantity-btn btn-minus" type="button">-</button>
+                          <input class="value" value="1" type="text">
+                          <button class="quantity-btn btn-plus" type="button">+</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+              <div class="checkout-goods__footer">
+                <div class="checkout-price__wrapper">
+                  <span>Итого к оплате</span>
+                  <small>Без учета стоимости доставки</small>
+                </div>
+                <div class="checkout-price__total">
+                  <span>Cумма</span>
+                  <b>36000 грн</b>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- ============== -->
+      </div>
+    </div>
+  </main>
+  ${require('../parts/footer.html')}
+
+</body>
+
+</html>

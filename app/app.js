@@ -12,6 +12,7 @@ if (process.env.NODE_ENV !== 'production') {
     require('./assets/templates/layouts/blog.html');
     require('./assets/templates/layouts/return-change.html');
     require('./assets/templates/layouts/delivery-payment.html');
+    require('./assets/templates/layouts/checkout.html');
 }
 
 // Depends
@@ -23,7 +24,7 @@ var Forms = require('_modules/forms');
 var Popup = require('_modules/popup');
 var LightGallery = require('_modules/lightgallery');
 var Slider = require('_modules/slider');
-//require('../node_modules/sumoselect/jquery.sumoselect.min');
+require('../node_modules/sumoselect/jquery.sumoselect.min');
 //require('../node_modules/ez-plus/src/jquery.ez-plus');
 require('../node_modules/mark.js/dist/jquery.mark.min');
 require('../node_modules/sweetalert2/dist/sweetalert2');
@@ -217,10 +218,64 @@ $(function () {
     });
 
     // select
+    $('.select.obl').SumoSelect({
+        forceCustomRendering: true,
+        search: true,
+        searchText: 'Выбрать',
+        noMatch: 'Не найдено'
+    });
 
-    /*$('.select').SumoSelect({
-      forceCustomRendering: true
-    });*/
+    $('.select').SumoSelect({
+        forceCustomRendering: true
+    });
+
+    // checkout
+    $(".deliver-nova").hide();
+    $(".deliver-courier").hide();
+    $(".select.delivery").change(function () {
+        var value = $(this).val(),
+
+            $nova = $(this).closest(".chechout-form").find(".deliver.deliver-nova"),
+            $courier = $(this).closest(".chechout-form").find(".deliver.deliver-courier");
+
+        if (value == "nova") {
+            $nova.show();
+        } else {
+            $nova.hide();
+        }
+
+        if (value == "courier") {
+            $courier.show();
+        } else {
+            $courier.hide();
+        }
+
+        if (value == "self") {
+            $self.show();
+        } else {
+            $self.hide();
+        }
+    });
+
+    // quantity
+    $(document).on("click", ".btn-plus", function () {
+        var input = $(this).parent().find("input");
+        input.val(parseInt(input.val()) + 1).change();
+    });
+    $(document).on("click", ".btn-minus", function () {
+        var input = $(this).parent().find("input");
+        var val = parseInt(input.val());
+        if (val > 1) {
+            val--;
+        }
+        input.val(val).change();
+    });
+
+
+    $('.checkout-goods__close').click(function () {
+        $(this).closest('li').remove();
+    });
+
 
     // mobile menu
 
@@ -407,6 +462,7 @@ $('.faq-head').click(function () {
 // spoiler
 
 $(".spoiler-content").hide();
+$(".spoiler-content.checkout-goods__list").show();
 $('.spoiler-title').click(function () {
     $(this).toggleClass('active').next('.spoiler-content').slideToggle();
 });
