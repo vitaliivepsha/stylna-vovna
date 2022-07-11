@@ -53,6 +53,9 @@
   position: relative;
   border-radius: 10px;
   overflow: hidden;
+  @include bp(lg) {
+    height: 250px;
+  }
   &:hover{
     &:after{
       opacity: 1;

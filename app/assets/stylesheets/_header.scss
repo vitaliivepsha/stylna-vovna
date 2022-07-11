@@ -1,11 +1,15 @@
 .header {
   transition: linear 0.4s;
   position: fixed;
+  width: 100vw;
   top: 0;
   left: 0;
   right: 0;
   z-index: 100;
   border-bottom: 1px solid $brown;
+  @include bp(md) {
+    border-bottom: none;
+  }
   &.fixed {
     background-color: $white-opacity;
     @include bp(md) {
@@ -14,6 +18,9 @@
     .header-top{
       height: 70px;
       padding-top: 0;
+      @include bp(md) {
+        height: 50px;
+      }
       .container{
         height: 100%;
         align-items: center;
@@ -21,6 +28,9 @@
     }
     .header-logo{
       height: 50px;
+      @include bp(lg) {
+        height: 28px;
+      }
     }
     .header-left, .header-right{
       padding-top: 0;
@@ -33,11 +43,22 @@
   transition: linear 0.4s;
   border-bottom: 1px solid $brown;
   padding-top: 34px;
+  @include bp(lg) {
+    height: 120px;
+  }
+  @include bp(md) {
+    height: 50px;
+    padding-top: 0;
+  }
   .container{
     transition: linear 0.4s;
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
+    @include bp(md) {
+      height: 100%;
+      align-items: center;
+    }
   }
 }
 
@@ -47,11 +68,21 @@
   align-items: center;
   padding-top: 20px;
   transition: linear 0.4s;
+  @include bp(lg) {
+    padding-top: 15px;
+  }
+  @include bp(md) {
+    width: auto;
+    padding-top: 0;
+  }
 }
 
 .header-socials{
   display: flex;
   align-items: center;
+  @include bp(md) {
+    display: none;
+  }
   a{
     display: flex;
     margin-right: 25px;
@@ -75,6 +106,15 @@
   width: 420px;
   height: 80px;
   transition: linear 0.4s;
+  @include bp(lg) {
+    width: 300px;
+    height: 48px;
+  }
+  @include bp(md) {
+    width: 175px;
+    height: 34px;
+    align-items: center;
+  }
   img{
     width: 100%;
   }
@@ -87,6 +127,14 @@
   justify-content: flex-end;
   padding-top: 20px;
   transition: linear 0.4s;
+  @include bp(lg) {
+    padding-top: 10px;
+  }
+  @include bp(md) {
+    width: auto;
+    flex: 1 0 auto;
+    padding-top: 0;
+  }
 }
 
 .header-phones__wrapper{
@@ -128,6 +176,9 @@
 .header-phone__main{
   display: flex;
   align-items: center;
+  @include bp(md) {
+    font-size: 0;
+  }
   i{
     margin-left: 6px;
     width: 9px;
@@ -135,6 +186,14 @@
     display: flex;
     align-items: center;
     transition: 0.2s linear;
+    @include bp(md) {
+      position: relative;
+      z-index: 1;
+      width: 30px;
+      height: 30px;
+      margin-left: -8px;
+      padding: 10px;
+    }
   }
 }
 
@@ -410,6 +469,9 @@
 }
 
 .header-bot{
+  @include bp(md) {
+    display: none;
+  }
   .container{
     height: 60px;
     display: flex;
@@ -513,6 +575,9 @@
     }
     >a{
       padding: 22px 25px;
+      @include bp(lg) {
+        padding: 22px 11px;
+      }
     }
   }
 }
@@ -730,4 +795,10 @@
 
 .header-spacer{
   height: 199px;
+  @include bp(lg) {
+    height: 181px;
+  }
+  @include bp(md) {
+    height: 50px;
+  }
 }
