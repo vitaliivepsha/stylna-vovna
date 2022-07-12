@@ -35,6 +35,10 @@
   @include bp(lg) {
     padding-left: 15px;
   }
+  @include bp(sm) {
+    position: relative;
+    z-index: 1;
+  }
   .btn{
     width: 222px;
   }
@@ -53,6 +57,9 @@
     width: 134px;
     height: 134px;
     margin-left: 17px;
+    @include bp(md) {
+      margin-left: 15px;
+    }
     img{
       width: 100%;
       height: 100%;
@@ -68,6 +75,9 @@
   @include bp(xxl) {
     max-width: 430px;
   }
+  @include bp(sm) {
+    max-width: 100%;
+  }
   p{
     margin-bottom: 5px;
   }
@@ -77,6 +87,9 @@
   padding: 0 10px;
   display: flex;
   justify-content: flex-end;
+  @include bp(sm) {
+    justify-content: center;
+  }
 }
 
 .about-pic__main{

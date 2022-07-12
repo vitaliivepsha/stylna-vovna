@@ -1,5 +1,8 @@
 .categories-section{
   padding-bottom: 30px;
+  @include bp(xs) {
+    padding-bottom: 10px;
+  }
 }
 
 .categories-logo{
@@ -7,6 +10,10 @@
   margin: 0 auto 10px;
   width: 134px;
   height: 134px;
+  @include bp(xs) {
+    width: 100px;
+    height: 100px;
+  }
   img{
     width: 100%;
     height: 100%;
@@ -21,15 +28,25 @@
   font-family: $title;
   text-align: center;
   margin: 0 auto 66px;
+  @include bp(xs) {
+    font-size: 16px;
+    margin-bottom: 30px;
+  }
 }
 
 .categories-wrapper{
   display: flex;
   flex-wrap: wrap;
   margin: 0 -10px;
+  @include bp(xs) {
+    margin: 0 -5px;
+  }
   .col-xs-6{
     padding: 0 10px;
     margin-bottom: 20px;
+    @include bp(xs) {
+      padding: 0 5px;
+    }
   }
 }
 
@@ -41,6 +58,9 @@
   text-decoration: none;
   border-radius: 10px;
   overflow: hidden;
+  @include bp(xs) {
+    height: calc(33vw - 10px);
+  }
   &:hover{
     text-decoration: none;
     div{
@@ -48,6 +68,9 @@
       color: #fff;
       span{
         width: 36px;
+        @include bp(xs) {
+          width: 0;
+        }
       }
     }
   }
@@ -81,6 +104,20 @@
     background-color: $white-opacity;
     color: $main;
     transition: linear .2s;
+    @include bp(sm) {
+      font-size: 18px;
+      line-height: 20px;
+    }
+    @include bp(xs) {
+      width: calc(100% - 20px);
+      max-width: calc(100% - 20px);
+      min-width: unset;
+      bottom: 12px;
+      padding: 5px 7px;
+      font-size: 14px;
+      line-height: 16px;
+      min-height: 20px;
+    }
     span{
       display: flex;
       align-items: center;
@@ -88,6 +125,9 @@
       width: 0;
       overflow: hidden;
       transition: linear .2s;
+      @include bp(xs) {
+        display: none;
+      }
     }
   }
 }

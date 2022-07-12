@@ -13,6 +13,9 @@
   display: flex;
   justify-content: flex-end;
   padding: 0 10px;
+  @include bp(sm) {
+    justify-content: center;
+  }
   picture{
     width: 533px;
     height: 591px;

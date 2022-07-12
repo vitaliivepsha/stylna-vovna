@@ -44,6 +44,9 @@
       padding: 34px 48px 58px 57px;
       border-radius: 10px;
       position: relative;
+      @include bp(md) {
+        padding: 34px 30px 58px 30px;
+      }
       picture{
         position: absolute;
         display: flex;

@@ -1,9 +1,15 @@
 .main-section{
   padding: 60px 0 70px;
+  @include bp(xs) {
+    padding: 36px 0 27px;
+  }
   .container{
     position: relative;
     display: flex;
     flex-wrap: wrap;
+    @include bp(xs) {
+      flex-direction: column;
+    }
     &:before{
       display: block;
       position: absolute;
@@ -16,6 +22,16 @@
       background-color: $pink;
       top: -301px;
       left: -391px;
+      @include bp(md) {
+        width: 447px;
+        height: 447px;
+        top: -53px;
+        left: -90px;
+      }
+      @include bp(xs) {
+        left: -160px;
+        top: -16px;
+      }
     }
     &:after{
       display: block;
@@ -29,6 +45,21 @@
       background-color: $light;
       top: -179px;
       right: -327px;
+      @include bp(md) {
+        width: 600px;
+        height: 600px;
+      }
+      @include bp(sm) {
+        display: none;
+      }
+      @include bp(xs) {
+        display: block;
+        width: 429px;
+        height: 429px;
+        right: -166px;
+        top: auto;
+        bottom: -67px;
+      }
     }
   }
 }
@@ -37,6 +68,9 @@
   width: 628px;
   @include bp(lg) {
     width: 50%;
+  }
+  @include bp(xs) {
+    width: 100%;
   }
   img{
     width: 100%;
@@ -54,6 +88,18 @@
   @include bp(lg) {
     width: 50%;
   }
+  @include bp(md) {
+    padding-top: 60px;
+    padding-left: 30px;
+  }
+  @include bp(sm) {
+    padding-top: 35px;
+  }
+  @include bp(xs) {
+    width: 100%;
+    padding-left: 42px;
+    padding-right: 32px;
+  }
   >picture{
     position: absolute;
     pointer-events: none;
@@ -64,6 +110,13 @@
     @include bp(lg) {
       display: none;
     }
+    @include bp(xs) {
+      position: static;
+      display: block;
+      width: 220px;
+      height: 325px;
+      margin: 52px auto 0;
+    }
     img{
       width: 100%;
       height: 100%;
@@ -73,6 +126,15 @@
   .btn{
     width: 205px;
     margin-top: 113px;
+    @include bp(md) {
+      margin-top: 40px;
+    }
+    @include bp(xs) {
+      margin: 22px auto 0;
+    }
+    @include bp(xxs) {
+      margin-left: 0;
+    }
   }
 }
 
@@ -84,6 +146,24 @@
   text-transform: uppercase;
   font-size: 82px;
   line-height: 96px;
+  @include bp(md) {
+    font-size: 58px;
+    line-height: 72px;
+  }
+  @include bp(sm) {
+    font-size: 48px;
+    line-height: 56px;
+  }
+  @include bp(xs) {
+    font-size: 42px;
+    line-height: 52px;
+    width: 215px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  @include bp(xxs) {
+    margin-left: 0;
+  }
 }
 
 .main-descr{
@@ -92,4 +172,15 @@
   max-width: 368px;
   font-size: 16px;
   line-height: 140%;
+  @include bp(xs) {
+    margin-top: 6px;
+    font-size: 14px;
+    line-height: 140%;
+    width: 215px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  @include bp(xxs) {
+    margin-left: 0;
+  }
 }

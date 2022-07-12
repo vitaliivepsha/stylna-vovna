@@ -2,6 +2,9 @@
   padding-top: 40px;
   padding-bottom: 40px;
   z-index: 2;
+  @include bp(xs) {
+    padding-top: 26px;
+  }
 }
 
 .related-top{
@@ -29,6 +32,13 @@
     border: 1px solid transparent;
     transition: linear .2s;
     border-radius: 100px;
+    @include bp(xs) {
+      margin-right: 0;
+      font-size: 18px;
+      line-height: 21px;
+      height: 35px;
+      padding: 0 7px;
+    }
     &:hover{
       border-color: $brown;
     }
@@ -48,6 +58,9 @@
   margin-right: -6px;
   &.active{
     display: flex;
+    @include bp(xs) {
+      display: none;
+    }
   }
 }
 
@@ -87,12 +100,22 @@
 .related-content{
   margin: 0 -10px;
   display: none;
+  @include bp(xs) {
+    width: calc(100vw - 15px);
+    height: 515px;
+    margin: 0;
+    overflow-x: auto;
+  }
   &.active{
     display: block;
   }
 }
 
 .related-slider{
+  @include bp(xs) {
+    display: flex;
+    width: max-content;
+  }
   .slick-list{
     overflow: visible;
   }
@@ -107,5 +130,21 @@
   }
   .slide{
     padding: 0 10px;
+    @include bp(xs) {
+      width: 228px;
+      min-width: 228px;
+      padding: 0;
+      margin-right: 13px;
+    }
+    &:last-child{
+      @include bp(xs) {
+        margin-right: 0;
+      }
+    }
+    .product-pic__wrapper{
+      @include bp(xs) {
+        height: 296px;
+      }
+    }
   }
 }
