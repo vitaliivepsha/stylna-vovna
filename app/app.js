@@ -13,6 +13,10 @@ if (process.env.NODE_ENV !== 'production') {
     require('./assets/templates/layouts/return-change.html');
     require('./assets/templates/layouts/delivery-payment.html');
     require('./assets/templates/layouts/checkout.html');
+    require('./assets/templates/layouts/proizvodstvo.html');
+    require('./assets/templates/layouts/size.html');
+    require('./assets/templates/layouts/showroom.html');
+    require('./assets/templates/layouts/clients.html');
 }
 
 // Depends

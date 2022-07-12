@@ -26,6 +26,27 @@
   }
 }
 
+.popup.page-info-video {
+  width: 900px;
+  padding: 0;
+
+  & button.mfp-close {
+    top: -45px;
+        right: -47px;
+    @media (max-width: 991px) {
+          right: -15px;
+    }
+  }
+  & .content {
+    aspect-ratio: 16 / 9;
+  }
+
+& iframe {
+  width: 100%;
+  height: 100%;
+}
+}
+
 .swal2-container.swal2-shown{
   background: rgba(0, 49, 116, 0.5);
   backdrop-filter: blur(10px);

@@ -18,6 +18,7 @@ body {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+
   @include bp(md) {
     display: block;
   }
@@ -26,10 +27,11 @@ body {
     & .main {
       overflow: hidden;
     }
-    
+
   }
-    &.sumoStopScroll {
-overflow: auto;
+
+  &.sumoStopScroll {
+    overflow: auto;
   }
 }
 
@@ -344,5 +346,9 @@ textarea:-webkit-autofill:hover {
 @import "blog";
 @import "change";
 @import "checkout";
+@import "proizvodstvo";
+@import "size";
+@import "showroom";
+@import "clients";
 
 
