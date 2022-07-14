@@ -1,75 +1,298 @@
-.mfp-bg{
+.mfp-bg {
   background: rgba(0, 49, 116, 0.5);
   backdrop-filter: blur(10px);
   z-index: 10005;
   opacity: 1;
 }
 
-.mfp-wrap{
+.mfp-wrap {
   z-index: 10006;
 }
 
-.mfp-container{
-}
+.mfp-container {}
 
-.popup{
+.popup {
   position: relative;
   margin: 0 auto;
   width: 730px;
   max-width: calc(100vw - 30px);
-  padding: 60px 145px 80px 160px;
-  color: #fff;
-  .mfp-close{
-    svg{
+
+  .mfp-close {
+    width: 62px;
+      height: 91px;
+    opacity: 1;
+    transition: opacity linear 0.2s;
+
+    svg {
       pointer-events: none;
+    }
+
+    &:hover {
+      opacity: 0.7;
     }
   }
 }
+
 
 .popup.page-info-video {
   width: 900px;
   padding: 0;
+  box-shadow: 0px 0px 10px rgba(81, 78, 180, 0.2);
 
   & button.mfp-close {
     top: -45px;
-        right: -47px;
+    right: -47px;
+
     @media (max-width: 991px) {
-          right: -15px;
+      right: -15px;
     }
   }
+
   & .content {
     aspect-ratio: 16 / 9;
   }
 
-& iframe {
-  width: 100%;
-  height: 100%;
-}
+  & iframe {
+    width: 100%;
+    height: 100%;
+  }
 }
 
-.swal2-container.swal2-shown{
+.popup.review-popup {
+  width: 937px;
+  padding-top: 68px;
+  padding-right: 120px;
+  padding-bottom: 91px;
+  padding-left: 49px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(81, 78, 180, 0.2);
+
+  
+
+  & .reviews-btn {
+    width: 310px;
+    margin: 0 auto;
+
+    & span {
+      margin-right: -62px;
+    }
+
+    & svg {
+      margin-left: 47px;
+    }
+  }
+
+  & .review-popup__title {
+    display: block;
+    margin-left: 65px;
+    margin-bottom: 36px;
+    font-family: $title;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 30px;
+      line-height: 35px;
+      text-align: center;
+      text-transform: uppercase;
+  }
+
+  & .review-popup__form-rating {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    margin-left: 82px;
+    & span {
+        font-size: 12px;
+        line-height: 14px;
+        margin-right: 20px;
+      }
+  }
+
+  .rating>input~label {
+    cursor: pointer;
+  }
+
+  .rating>input {
+    display: none;
+  }
+
+  .rating>label:before {
+    display: block;
+    content: "";
+    width: 15px;
+    height: 15px;
+    // star-empty
+    -webkit-mask: url("../images/icons/star.svg");
+    mask: url("../images/icons/star.svg");
+    -webkit-mask-position: center;
+    mask-position: center;
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    -webkit-mask-size: contain;
+    mask-size: contain;
+    background-color: $red;
+  }
+
+  .rating>label {
+    width: auto;
+    float: right;
+    margin-right: 0;
+    margin-bottom: 0;
+  }
+
+  .rating:not(:checked)>label:hover:before,
+  .rating:not(:checked)>label:hover~label:before,
+  .rating>input:checked+label:hover:before,
+  .rating>input:checked~label:before,
+  .rating>input:checked~label:hover:before,
+  .rating>input:checked~label:hover~label:before,
+  .rating>label:hover~input:checked~label:before {
+    -webkit-mask: url("../images/icons/star-full.svg");
+    mask: url("../images/icons/star-full.svg");
+    -webkit-mask-position: center;
+    mask-position: center;
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    -webkit-mask-size: contain;
+    mask-size: contain;
+  }
+
+  .rating>input:checked~label:before {
+    -webkit-mask: url("../images/icons/star-full.svg");
+    mask: url("../images/icons/star-full.svg");
+    -webkit-mask-position: center;
+    mask-position: center;
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    -webkit-mask-size: contain;
+    mask-size: contain;
+  }
+
+    & .review-popup__form-inner {
+      display: flex;
+      gap: 20px;
+      margin-bottom: 19px;
+      &>div {
+        flex-grow: 1;
+        height: 100%;
+        &:first-child {
+          width: 297px;
+        }
+      }
+            .validate-error {
+              top: 32px;
+            }
+  
+      & .input,
+      .textarea {
+        border: 1px solid rgba(170, 167, 178, 0.3);
+        
+      }
+  
+      & .textarea {
+        height: 124px;
+      }
+    }
+    
+
+& .input-wrapper {
+  height: 100%;
+  & +.input-wrapper {
+    margin-top: 10px;
+  } 
+  & label {
+   margin-bottom: 0;
+    font-weight: 500;
+      font-size: 12px;
+      line-height: 14px;
+  }
+}
+
+  & .review-popup__form-upload {
+    display: flex;
+    justify-content: center;
+   margin-bottom: 23px;
+padding-left: 56px;
+    .input-file {
+      cursor: pointer;
+  max-width: 409px;
+
+      >label {
+        font-weight: 400;
+        margin-bottom: 0;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+
+        &:hover {
+          svg {
+            path {
+              fill: $red;
+            }
+          }
+
+          span {
+            color: $red;
+          }
+        }
+
+        >svg {
+          min-width: 11px;
+        margin-right: 23px;
+        margin-bottom: 12px;
+        }
+
+        span {
+        font-weight: 400;
+          font-size: 12px;
+          line-height: 14px;
+          overflow: hidden;
+          text-overflow: ellipsis;
+        }
+      }
+
+      input {
+        display: none;
+      }
+    }
+  }
+  & .reviews-btn {
+        margin-left: 266px;
+  }
+}
+
+// ==============================
+
+.swal2-container.swal2-shown {
   background: rgba(0, 49, 116, 0.5);
   backdrop-filter: blur(10px);
   z-index: 10005;
 }
 
-.swal2-modal{
+.swal2-modal {
   background-color: #fff !important;
   width: 730px !important;
   max-width: calc(100vw - 30px);
   border-radius: 0;
   color: #fff;
   padding: 60px 60px 110px !important;
-  @include bp(sm){
+
+  @include bp(sm) {
     padding: 60px 30px 80px !important;
   }
-  @include bp(xs){
+
+  @include bp(xs) {
     padding: 40px 15px 80px !important;
   }
-  .swal2-icon{
+
+  .swal2-icon {
     display: none !important;
   }
-  .swal2-title{
+
+  .swal2-title {
     font-family: $default;
     font-weight: 600;
     font-size: 36px;
@@ -79,26 +302,31 @@
     margin-bottom: 42px;
     text-align: center;
     color: #fff;
-    @include bp(xs){
+
+    @include bp(xs) {
       font-size: 18px;
       line-height: 22px;
       margin-bottom: 28px;
     }
   }
-  .swal2-content{
+
+  .swal2-content {
     font-family: $default;
     font-size: 12px;
     line-height: 15px;
     text-align: center;
     color: #fff;
   }
-  .swal2-buttonswrapper{
+
+  .swal2-buttonswrapper {
     margin-top: 45px;
-    @include bp(xs){
+
+    @include bp(xs) {
       margin-top: 25px;
     }
   }
-  .swal2-styled{
+
+  .swal2-styled {
     margin: 0 auto;
     width: 220px;
     height: 50px;
@@ -112,13 +340,15 @@
     border-radius: 30px;
     outline: none !important;
     box-shadow: none !important;
-    @include bp(xs){
+
+    @include bp(xs) {
       height: 40px;
       width: 174px;
       font-size: 14px;
       line-height: 17px;
     }
-    &:hover{
+
+    &:hover {
       background-color: #fff !important;
     }
   }

@@ -176,7 +176,8 @@ main {
   position: relative;
   width: 100%;
   &.err{
-    .input{
+    .input,
+    .textarea{
       border-color: $red;
     &::placeholder {
         color: transparent;
@@ -255,8 +256,8 @@ textarea:-webkit-autofill:hover {
   font-family: $default, -apple-system, BlinkMacSystemFont, sans-serif;
   transform: none;
   width: max-content;
-      left: 17px;
-        bottom: 8px;
+  left: 17px;
+  top: 26px;
   font-size: 12px;
   color: $red;
 }
@@ -350,5 +351,6 @@ textarea:-webkit-autofill:hover {
 @import "size";
 @import "showroom";
 @import "clients";
+@import "reviews";
 
 

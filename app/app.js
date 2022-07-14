@@ -17,6 +17,7 @@ if (process.env.NODE_ENV !== 'production') {
     require('./assets/templates/layouts/size.html');
     require('./assets/templates/layouts/showroom.html');
     require('./assets/templates/layouts/clients.html');
+    require('./assets/templates/layouts/reviews.html');
 }
 
 // Depends
@@ -276,7 +277,6 @@ $(function () {
         input.val(val).change();
     });
 
-
     $('.checkout-goods__close').click(function () {
         $(this).closest('li').remove();
         if (!$(".checkout-goods__list li").length) {
@@ -289,11 +289,6 @@ $(function () {
         $(".checkout-goods__list").closest('.checkout-goods').find('.checkout-title').css('pointer-events', 'none').removeClass('spoiler-title');
         $(".checkout-goods__list").closest('.checkout-goods').find('.checkout-title').find('i').css('display', 'none');
     }
-
-
-
-
-
 
     // mobile menu
 
@@ -420,4 +415,19 @@ $(".spoiler-content").hide();
 $(".spoiler-content.checkout-goods__list").show();
 $('.spoiler-title').click(function () {
     $(this).toggleClass('active').next('.spoiler-content').slideToggle();
+});
+
+// upload life 
+
+$(document).on('change', '.input-file input', function () {
+    var $file = $(this),
+        $label = $file.next('label'),
+        $labelText = $label.find('span'),
+        labelDefault = $labelText.text(),
+        fileName = $file.val().split('\\').pop();
+    if (fileName) {
+        $labelText.text(fileName);
+    } else {
+        $labelText.text(labelDefault);
+    }
 });
