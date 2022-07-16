@@ -18,6 +18,8 @@ if (process.env.NODE_ENV !== 'production') {
     require('./assets/templates/layouts/showroom.html');
     require('./assets/templates/layouts/clients.html');
     require('./assets/templates/layouts/reviews.html');
+    require('./assets/templates/layouts/th.html');
+    require('./assets/templates/layouts/product-page.html');
 }
 
 // Depends

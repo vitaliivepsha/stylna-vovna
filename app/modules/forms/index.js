@@ -372,7 +372,7 @@ module.exports = function () {
                         if (typeof form.data('success-title') !== 'undefined' || typeof form.data('success-message') !== 'undefined') {
                             swal({
                                 showCancelButton: true,
-                                timer: 30000000
+                                timer: 3000
                             });
                             swal(form.data('success-title'), form.data('success-message'), 'success').then(() => {
                                 location.reload(true);

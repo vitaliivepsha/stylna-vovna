@@ -264,6 +264,7 @@ textarea:-webkit-autofill:hover {
   font-size: 12px;
   color: $red;
   background-color: #fff;
+  pointer-events: none;
 }
 
 .overlay {
@@ -356,5 +357,7 @@ textarea:-webkit-autofill:hover {
 @import "showroom";
 @import "clients";
 @import "reviews";
+@import "th";
+@import "product-page";
 
 
