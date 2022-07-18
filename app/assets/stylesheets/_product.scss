@@ -236,6 +236,10 @@
       .tooltip{
         visibility: visible;
         opacity: 1;
+        @include bp(xs) {
+          visibility: hidden;
+          opacity: 0;
+        }
       }
     }
     &:before{
