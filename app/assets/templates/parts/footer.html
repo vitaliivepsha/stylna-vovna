@@ -109,55 +109,7 @@
   </div>
 </footer>
 <div class="mfp-hide">
-  <!-- <div class="popup" id="question-popup">
-    <button title="Close (Esc)" type="button" class="mfp-close">
-      <svg width="37" height="37" viewBox="0 0 37 37" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path
-          d="M24.0349 10.792L18.5003 16.3266L12.9657 10.792L10.792 12.9657L16.3266 18.5003L10.792 24.0349L12.9657 26.2087L18.5003 20.6741L24.0349 26.2087L26.2087 24.0349L20.6741 18.5003L26.2087 12.9657L24.0349 10.792Z"
-          fill="white" />
-      </svg>
-    </button>
-    <span class="popup-title">Свяжитесь с нами!</span>
-    <form class="consult-form ajax_form clear-styles" data-error-title="Ошибка отправки!"
-      data-error-message="Попробуйте еще раз через некоторое время." data-success-title="Спасибо за сообщение"
-      data-success-message="Наш менеджер свяжется с Вами в ближайшее время.">
-      <div class="radio-wrapper">
-        <span>Связаться как:</span>
-        <div class="radio">
-          <input type="radio" name="type" id="r1">
-          <label for="r1">Поставщик</label>
-        </div>
-        <div class="radio">
-          <input type="radio" name="type" id="r2">
-          <label for="r2">Дистрибьютор</label>
-        </div>
-        <div class="radio">
-          <input type="radio" name="type" id="r3">
-          <label for="r3">Потребитель</label>
-        </div>
-      </div>
-      <div class="input-wrapper">
-        <input class="input" type="text" name="name" placeholder="Имя" data-title="Имя"
-          data-validate-required="Обязательное поле">
-      </div>
-      <div class="form-row">
-        <div class="input-wrapper">
-          <input class="input" type="email" name="email" placeholder="Email" data-title="Email"
-            data-validate-required="Обязательное поле" data-validate-email="Неправильный email">
-        </div>
-        <div class="input-wrapper">
-          <input class="input" type="tel" name="phone" placeholder="Телефон" data-title="Телефон"
-            data-validate-required="Обязательное поле" data-validate-uaphone="Неправильный номер">
-        </div>
-      </div>
-      <div class="input-wrapper">
-        <input class="input" type="text" name="comment" placeholder="Текст сообщения" data-title="Сообщение"
-          data-validate-required="Обязательное поле">
-      </div>
-      <button type="submit" class="btn btn-tr">Задать вопрос</button>
-    </form>
-  </div> -->
-  <div class="popup page-info-video mfp-hide" id="info-video-popup">
+  <div class="popup page-info-video" id="info-video-popup">
     <button title="Close (Esc)" type="button" class="mfp-close">
       <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M12.59 0L7 5.59L1.41 0L0 1.41L5.59 7L0 12.59L1.41 14L7 8.41L12.59 14L14 12.59L8.41 7L14 1.41L12.59 0Z"
@@ -169,7 +121,7 @@
         allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     </div>
   </div>
-  <div class="popup review-popup mfp-hide" id="review-popup">
+  <div class="popup review-popup" id="review-popup">
     <button title="Close (Esc)" type="button" class="mfp-close">
       <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path
@@ -178,10 +130,10 @@
       </svg>
     </button>
     <div class="content">
-      <span class="review-popup__title">Оставьте свой отзыв</span>
+      <span class="review-popup__title popup-title">Оставьте свой отзыв</span>
       <form class="review-popup__form ajax_form clear-styles" data-error-title="Ошибка отправки!"
         data-error-message="Попробуйте еще раз через некоторое время." data-success-title="Спасибо за отзыв!"
-        data-success-message="Он будет опубликован после модерации">
+        data-success-message="Отзыв будет опубликован после проверки модератором">
         <div class="review-popup__form-rating">
           <span>Поставьте Вашу оценку</span>
           <fieldset class="rating">
@@ -192,9 +144,6 @@
             <input type="radio" id="star1" name="grade" value="1"><label class="rating-star" for="star1"></label>
           </fieldset>
         </div>
-
-
-
         <div class="review-popup__form-inner">
           <div>
             <div class="input-wrapper">
@@ -247,4 +196,153 @@
 
     </div>
   </div>
+  <div class="popup fitting-popup" id="fitting-popup">
+    <button title="Close (Esc)" type="button" class="mfp-close">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path
+          d="M17.59 5L12 10.59L6.41 5L5 6.41L10.59 12L5 17.59L6.41 19L12 13.41L17.59 19L19 17.59L13.41 12L19 6.41L17.59 5Z"
+          fill="#7A6DA6" />
+      </svg>
+    </button>
+    <div class="content">
+      <span class="fitting-popup__title popup-title">Запись на примерку</span>
+      <form class="review-popup__form ajax_form clear-styles" data-error-title="Ошибка отправки!"
+        data-error-message="Попробуйте еще раз через некоторое время." ddata-success-title="Спасибо за обращение"
+        data-success-message="Наш менеджер свяжется с Вами в ближайшее время">
+        <span class="fitting-popup__text">Хотите записаться на примерку в г. Харьков? Оставьте свои контакты и наши
+          менеджеры свяжутся с Вами, чтобы согласовать
+          время</span>
+        <div class="fitting-popup__form-inner">
+          <div>
+            <div class="input-wrapper">
+              <label>Ваше имя</label>
+              <input class="input" type="text" name="name" data-title="Имя" data-validate-required="Введите имя"
+                placeholder="Имя">
+            </div>
+            <div class="input-wrapper">
+              <label>Телефон</label>
+              <input class="input" type="phone" name="phone" data-title="Телефон"
+                data-validate-required="Введите свой телефон" data-validate-uaphone="Неправильный номер"
+                placeholder="Телефон">
+            </div>
+          </div>
+        </div>
+        <button type="submit" class="btn btn-arrow reviews-btn">
+          <span>
+            Отправить
+            <svg width="29" height="8" viewBox="0 0 29 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M28.6869 4.35355C28.8821 4.15829 28.8821 3.84171 28.6869 3.64644L25.5049 0.464464C25.3096 0.269202 24.9931 0.269202 24.7978 0.464464C24.6025 0.659726 24.6025 0.976309 24.7978 1.17157L27.6262 4L24.7978 6.82843C24.6025 7.02369 24.6025 7.34027 24.7978 7.53553C24.9931 7.73079 25.3096 7.73079 25.5049 7.53553L28.6869 4.35355ZM4.95396e-08 4.5L28.3333 4.5L28.3333 3.5L-4.95396e-08 3.5L4.95396e-08 4.5Z"
+                fill="white" />
+            </svg>
+          </span>
+        </button>
+
+      </form>
+
+
+
+
+    </div>
+  </div>
+  <div class="popup order-popup" id="order-popup">
+    <button title="Close (Esc)" type="button" class="mfp-close">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path
+          d="M17.59 5L12 10.59L6.41 5L5 6.41L10.59 12L5 17.59L6.41 19L12 13.41L17.59 19L19 17.59L13.41 12L19 6.41L17.59 5Z"
+          fill="#7A6DA6" />
+      </svg>
+    </button>
+    <div class="content">
+      <span class="order-popup__title popup-title">Заказ в 1 клик</span>
+      <div class="order-popup__wrapper">
+        <div class="order-popup__product">
+          <small>956804568-49</small>
+          <span>Шуба Winter snoe whiteШуба</span>
+          <div>
+            <picture>
+              <source srcset="../../images/pixel.webp" data-original="../../images/one-order.webp" class="lazy-web"
+                type="image/webp">
+              <source srcset="../../images/pixel.jpg" data-original="../../images/one-order.jpg" class="lazy-web"
+                type="image/jpg">
+              <img src="../../images/pixel.jpg" data-original="../../images/one-order.jpg" class="lazy" alt="">
+            </picture>
+          </div>
+          <b>145960 грн</b>
+        </div>
+        <span class="order-popup__text">Введите номер телефона и мы свяжемся с Вами для заказа по этой позиции</span>
+        <form class="review-popup__form ajax_form clear-styles" data-error-title="Ошибка отправки!"
+          data-error-message="Попробуйте еще раз через некоторое время." ddata-success-title="Спасибо за обращение"
+          data-success-message="Наш менеджер свяжется с Вами в ближайшее время">
+          <div class="input-wrapper">
+            <label>Телефон</label>
+            <input class="input" type="phone" name="phone" data-title="Телефон"
+              data-validate-required="Введите свой телефон" data-validate-uaphone="Неправильный номер"
+              placeholder="Телефон">
+          </div>
+          <button type="submit" class="btn">
+            <span>
+              Заказать
+            </span>
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+  <div class="popup review-popup consult-popup" id="consult-popup">
+    <button title="Close (Esc)" type="button" class="mfp-close">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path
+          d="M17.59 5L12 10.59L6.41 5L5 6.41L10.59 12L5 17.59L6.41 19L12 13.41L17.59 19L19 17.59L13.41 12L19 6.41L17.59 5Z"
+          fill="#7A6DA6" />
+      </svg>
+    </button>
+    <div class="content">
+      <span class="review-popup__title popup-title">Консультация</span>
+      <form class="review-popup__form ajax_form clear-styles" data-error-title="Ошибка отправки!"
+        data-error-message="Попробуйте еще раз через некоторое время." data-success-title="Спасибо за обращение"
+        data-success-message="Наш менеджер свяжется с Вами в ближайшее время">
+        <span class="consult-popup__form-text">
+          Задавайте вопросы и мы с удовольствием на них ответим
+        </span>
+        <div class="review-popup__form-inner">
+          <div>
+            <div class="input-wrapper">
+              <label>Ваше имя</label>
+              <input class="input" type="text" name="name" data-title="Имя" data-validate-required="Введите имя"
+                placeholder="Имя">
+            </div>
+            <div class="input-wrapper">
+              <label>Телефон</label>
+              <input class="input" type="phone" name="phone" data-title="Телефон"
+                data-validate-required="Введите свой телефон" data-validate-uaphone="Неправильный номер"
+                placeholder="Телефон">
+            </div>
+          </div>
+          <div>
+            <div class="input-wrapper">
+              <label>Ваш вопрос</label>
+              <textarea class="textarea" name="comment" data-title="Коментарий" placeholder="Введите текст"></textarea>
+            </div>
+          </div>
+        </div>
+        <button type="submit" class="btn btn-arrow reviews-btn">
+          <span>
+            Консультация
+            <svg width="29" height="8" viewBox="0 0 29 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M28.6869 4.35355C28.8821 4.15829 28.8821 3.84171 28.6869 3.64644L25.5049 0.464464C25.3096 0.269202 24.9931 0.269202 24.7978 0.464464C24.6025 0.659726 24.6025 0.976309 24.7978 1.17157L27.6262 4L24.7978 6.82843C24.6025 7.02369 24.6025 7.34027 24.7978 7.53553C24.9931 7.73079 25.3096 7.73079 25.5049 7.53553L28.6869 4.35355ZM4.95396e-08 4.5L28.3333 4.5L28.3333 3.5L-4.95396e-08 3.5L4.95396e-08 4.5Z"
+                fill="white" />
+            </svg>
+          </span>
+        </button>
+
+      </form>
+
+
+
+
+    </div>
+  </div>
+
 </div>

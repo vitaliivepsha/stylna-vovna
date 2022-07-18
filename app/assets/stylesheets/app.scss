@@ -118,7 +118,7 @@ main {
   line-height: 19px;
   border: 1px solid $main;
   background-color: $main;
-  color: #fff;
+  color: #fff !important;
   border-radius: 30px;
   box-shadow: none;
   outline: none !important;
@@ -141,12 +141,13 @@ main {
     outline: none;
     box-shadow: none;
   }
-  &:hover {
+  &:hover,
+    &:focus {
     text-decoration: none;
     outline: none;
     box-shadow: none;
     background-color: transparent;
-    color: $main;
+    color: $main !important;
     svg{
       path{
         fill: $main;
@@ -155,15 +156,16 @@ main {
   }
   &-tr{
     background-color: transparent;
-    color: $main;
+    color: $main !important;
     svg{
       path{
         fill: $main;
       }
     }
-    &:hover {
+    &:hover,
+        &:focus {
       background-color: $main;
-      color: #fff;
+      color: #fff !important;
       svg{
         path{
           fill: #fff;
@@ -179,7 +181,8 @@ main {
   &.err{
     .input,
     .textarea{
-      border-color: $red;
+      border-color: $red !important;
+      transition: border-color linear 0.1s;
     &::placeholder {
         color: transparent;
       }
@@ -261,6 +264,8 @@ textarea:-webkit-autofill:hover {
   top: 26px;
   font-size: 12px;
   color: $red;
+  background-color: #fff;
+  pointer-events: none;
 }
 
 .overlay {
@@ -353,5 +358,8 @@ textarea:-webkit-autofill:hover {
 @import "showroom";
 @import "clients";
 @import "reviews";
+@import "th";
+@import "product-page";
+@import "catalog";
 
 
