@@ -215,8 +215,7 @@ $(function () {
         $('.slick-slider').slick('setPosition');
     });
 
-    $(document).delegate('.related-tabs li:not(.active)', 'click touchstart', function (e) {
-        e.preventDefault();
+    $(document).delegate('.related-tabs li:not(.active)', 'click touchstart', function () {
         $(this)
             .addClass('active').siblings().removeClass('active')
             .closest('.related-tabs__wrapper').find('.related-content').removeClass('active').eq($(this).index()).addClass('active');

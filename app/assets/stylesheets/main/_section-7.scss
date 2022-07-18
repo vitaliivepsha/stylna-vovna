@@ -2,6 +2,10 @@
   padding-top: 100px;
   padding-bottom: 110px;
   background-color: $light;
+  @include bp(xs) {
+    padding-top: 64px;
+    padding-bottom: 66px;
+  }
 }
 
 .reviews-title{
@@ -12,11 +16,19 @@
   line-height: 42px;
   text-transform: uppercase;
   margin-bottom: 20px;
+  @include bp(xs) {
+    font-size: 26px;
+    line-height: 30px;
+    margin-bottom: 24px;
+  }
 }
 
 .reviews-more{
   width: 222px;
   margin: 0 auto 40px;
+  @include bp(xs) {
+    margin-bottom: 24px;
+  }
   span{
     margin-right: -10px;
   }
@@ -25,47 +37,10 @@
 .reviews-slider__wrapper{
   position: relative;
   margin: 0 -10px;
-}
-
-.reviews-slider{
-  .slick-track{
-    display: flex;
-    margin-left: 0;
-  }
-  .slick-slide{
-    padding: 0 10px;
-    height: inherit;
-    >div{
-      height: 100%;
-    }
-    .slide{
-      height: 100%;
-      background-color: #fff;
-      padding: 34px 48px 58px 57px;
-      border-radius: 10px;
-      position: relative;
-      @include bp(md) {
-        padding: 34px 30px 58px 30px;
-      }
-      picture{
-        position: absolute;
-        display: flex;
-        width: 60px;
-        height: 60px;
-        border-radius: 3px;
-        overflow: hidden;
-        top: 15px;
-        right: 17px;
-        img{
-          width: 100%;
-          height: 100%;
-          object-fit: cover;
-        }
-      }
-      .rating-stars{
-        margin-bottom: 13px;
-      }
-    }
+  @include bp(xs) {
+    margin: 0;
+    overflow: auto;
+    width: calc(100vw - 15px);
   }
 }
 
@@ -75,6 +50,9 @@
   position: absolute;
   right: 10px;
   bottom: calc(100% + 15px);
+  @include bp(xs) {
+    display: none;
+  }
 }
 
 .reviews-arrow{
@@ -110,6 +88,67 @@
   }
 }
 
+.reviews-slider{
+  @include bp(xs) {
+    display: flex;
+    width: max-content;
+  }
+  .slick-track{
+    display: flex;
+    margin-left: 0;
+  }
+  .slick-slide{
+    padding: 0 10px;
+    height: inherit;
+    >div{
+      height: 100%;
+    }
+  }
+  .slide{
+    height: 100%;
+    background-color: #fff;
+    padding: 34px 48px 58px 57px;
+    border-radius: 10px;
+    position: relative;
+    @include bp(md) {
+      padding: 34px 30px 58px 30px;
+    }
+    @include bp(xs) {
+      width: 250px;
+      min-width: 250px;
+      height: inherit;
+      margin-right: 15px;
+      padding: 24px 15px 58px 15px;
+    }
+    picture{
+      position: absolute;
+      display: flex;
+      width: 60px;
+      height: 60px;
+      border-radius: 3px;
+      overflow: hidden;
+      top: 15px;
+      right: 17px;
+      @include bp(xs) {
+        right: 15px;
+        width: 50px;
+        height: 50px;
+      }
+      img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+    .rating-stars{
+      margin-bottom: 13px;
+      @include bp(xs) {
+        margin-bottom: 10px;
+      }
+    }
+  }
+}
+
 .review-title{
   display: block;
   margin-bottom: 10px;
@@ -123,6 +162,9 @@
   font-size: 14px;
   line-height: 140%;
   margin-bottom: 18px;
+  @include bp(xs) {
+    margin-bottom: 24px;
+  }
 }
 
 .review-date{
@@ -134,6 +176,9 @@
   span{
     margin-left: 13px;
     color: $main;
+    @include bp(xs) {
+      margin-left: 20px;
+    }
   }
 }
 
@@ -146,16 +191,25 @@
   font-size: 14px;
   line-height: 16px;
   color: $grey-txt;
+  @include bp(xs) {
+    padding-top: 19px;
+  }
   >span{
     min-width: max-content;
     margin-right: 8px;
     color: $main;
+    @include bp(xs) {
+      margin-right: 14px;
+    }
   }
 }
 
 .reviews-btn{
   width: 235px;
   margin: 38px auto 0;
+  @include bp(xs) {
+    margin-top: 26px;
+  }
   span{
     margin-right: -20px;
   }
