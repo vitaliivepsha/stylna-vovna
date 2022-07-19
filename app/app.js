@@ -24,6 +24,7 @@ if (process.env.NODE_ENV !== 'production') {
     require('./assets/templates/layouts/catalog-chosen.html');
     require('./assets/templates/layouts/catalog-list.html');
     require('./assets/templates/layouts/search-results-empty.html');
+    require('./assets/templates/layouts/search-results.html');
 }
 
 // Depends
