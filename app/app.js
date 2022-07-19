@@ -381,11 +381,19 @@ $(function () {
     // filters
 
     $('.btn-filters').on('click', function () {
-        $('body').toggleClass('opened-filters');
+        $('body').addClass('opened-filters');
+    });
+
+    $('.mob-filters__close').on('click', function () {
+        $('body').removeClass('opened-filters');
     });
 
     $('.btn-categories').on('click', function () {
-        $('body').toggleClass('opened-categories');
+        $('body').addClass('opened-categories');
+    });
+
+    $('.mob-categories__close').on('click', function () {
+        $('body').removeClass('opened-categories');
     });
 
     // catalog sort dropdown
@@ -400,7 +408,8 @@ $(function () {
             .closest(".dropdown-sort")
             .removeClass("open")
             .find(".dropdown-sort-top > .dropdown-sort-top-text")
-            .html(val);
+            .html(val)
+            .addClass('chosen');
     });
 
     $(document).click(function () {

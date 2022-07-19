@@ -53,6 +53,29 @@ body {
       visibility: visible;
     }
   }
+  &.opened-filters{
+    height: 100vh;
+    overflow: hidden;
+    .mob-filters__wrapper{
+      z-index: 101;
+      opacity: 1;
+      visibility: visible;
+    }
+    .mob-filters__footer{
+      z-index: 102;
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+  &.opened-categories{
+    height: 100vh;
+    overflow: hidden;
+    .mob-categories__wrapper{
+      z-index: 101;
+      opacity: 1;
+      visibility: visible;
+    }
+  }
 }
 
 ol,
