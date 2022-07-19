@@ -32,3 +32,13 @@
 .search-results__head{
   border: none;
 }
+
+.search-results__items{
+  grid-template-columns: repeat(4, 1fr);
+  @media (max-width: 1300px) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  @include bp(md) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
