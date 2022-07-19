@@ -1,8 +1,15 @@
 .instagram-section{
   padding-top: 88px;
   padding-bottom: 80px;
+  @include bp(xs) {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
   +.links-section{
     padding: 0 0 114px;
+    @include bp(xs) {
+      padding: 0 0 47px;
+    }
   }
 }
 
@@ -14,6 +21,11 @@
   line-height: 42px;
   text-align: center;
   text-transform: uppercase;
+  @include bp(xs) {
+    font-size: 26px;
+    line-height: 30px;
+    margin-bottom: 12px;
+  }
 }
 
 .instagram-link{
@@ -24,6 +36,9 @@
   margin-bottom: 12px;
   color: $main;
   text-decoration: none;
+  @include bp(xs) {
+    margin-bottom: 16px;
+  }
   &:hover{
     color: $red;
     text-decoration: none;
@@ -35,6 +50,9 @@
   line-height: 16px;
   text-align: center;
   margin-bottom: 26px;
+  @include bp(xs) {
+    margin-bottom: 18px;
+  }
 }
 
 .instagram-outer{

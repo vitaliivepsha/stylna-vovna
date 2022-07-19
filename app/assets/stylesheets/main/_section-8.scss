@@ -4,6 +4,10 @@
   @include bp(sm) {
     padding-bottom: 60px;
   }
+  @include bp(xs) {
+    padding-top: 52px;
+    padding-bottom: 52px;
+  }
 }
 
 .clients-title{
@@ -14,6 +18,11 @@
   font-size: 36px;
   line-height: 42px;
   text-transform: uppercase;
+  @include bp(xs) {
+    font-size: 26px;
+    line-height: 30px;
+    margin-bottom: 14px;
+  }
 }
 
 .clients-descr{
@@ -27,6 +36,9 @@
 .clients-btn{
   width: 222px;
   margin: 0 auto 40px;
+  @include bp(xs) {
+    margin-bottom: 24px;
+  }
   span{
     margin-right: -10px;
   }
@@ -40,7 +52,6 @@
     padding: 0 28px 55px 13px;
   }
 }
-
 
 .clients-wrapper{
   width: 1200px;

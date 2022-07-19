@@ -1,6 +1,10 @@
 .about-section{
   padding-top: 65px;
   padding-bottom: 80px;
+  @include bp(xs) {
+    margin-top: -275px;
+    padding-bottom: 72px;
+  }
   .container{
     position: relative;
     &:before{
@@ -14,6 +18,10 @@
       background: $beige;
       top: -86px;
       left: -64px;
+      @include bp(xs) {
+        left: -99px;
+        top: -32px;
+      }
     }
   }
 }
@@ -52,6 +60,11 @@
   font-family: $title;
   text-transform: uppercase;
   margin-bottom: -5px;
+  @include bp(xs) {
+    font-size: 26px;
+    line-height: 30px;
+    margin-bottom: 10px;
+  }
   picture{
     display: block;
     width: 134px;
@@ -59,6 +72,11 @@
     margin-left: 17px;
     @include bp(md) {
       margin-left: 15px;
+    }
+    @include bp(xs) {
+      margin-left: 20px;
+      width: 98px;
+      height: 98px;
     }
     img{
       width: 100%;
@@ -78,6 +96,9 @@
   @include bp(sm) {
     max-width: 100%;
   }
+  @include bp(xs) {
+    margin-bottom: 26px;
+  }
   p{
     margin-bottom: 5px;
   }
@@ -89,6 +110,9 @@
   justify-content: flex-end;
   @include bp(sm) {
     justify-content: center;
+  }
+  @include bp(xs) {
+    display: none;
   }
 }
 

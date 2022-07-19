@@ -570,6 +570,11 @@ padding-right: 15px;
       @media (max-width: 767px) {
         padding-left: 0;
       }
+      *{
+        &:last-child{
+          margin-bottom: 0;
+        }
+      }
 
       & i {
         margin: 0;

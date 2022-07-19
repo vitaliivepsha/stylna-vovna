@@ -4,6 +4,15 @@
   z-index: 2;
   @include bp(xs) {
     padding-top: 26px;
+    &:hover{
+      z-index: 4;
+    }
+  }
+  +.instagram-section{
+    @include bp(xs) {
+      z-index: 3;
+      margin-top: -250px;
+    }
   }
 }
 
@@ -33,11 +42,13 @@
     transition: linear .2s;
     border-radius: 100px;
     @include bp(xs) {
-      margin-right: 0;
       font-size: 18px;
       line-height: 21px;
       height: 35px;
       padding: 0 7px;
+    }
+    @include bp(xxs) {
+      margin-right: 0;
     }
     &:hover{
       border-color: $brown;
@@ -101,9 +112,10 @@
   margin: 0 -10px;
   display: none;
   @include bp(xs) {
-    width: calc(100vw - 15px);
-    height: 515px;
-    margin: 0;
+    width: 100vw;
+    height: 580px;
+    margin: 0 0 0 -15px;
+    padding-left: 15px;
     overflow-x: auto;
   }
   &.active{
@@ -144,6 +156,78 @@
     .product-pic__wrapper{
       @include bp(xs) {
         height: 296px;
+      }
+    }
+    .product-pic__tabs{
+      li{
+        @include bp(xs) {
+          width: 37px;
+          height: 50px;
+          margin-bottom: 5px;
+        }
+      }
+    }
+    .product-labels{
+      @include bp(xs) {
+        top: 9px;
+        right: 13px;
+      }
+      span{
+        @include bp(xs) {
+          width: 28px;
+          height: 28px;
+          font-size: 12px;
+          line-height: 14px;
+        }
+        +span{
+          @include bp(xs) {
+            margin-top: 9px;
+          }
+        }
+      }
+    }
+    .product-info__title{
+      @include bp(xs) {
+        font-size: 14px;
+        line-height: 16px;
+        margin-bottom: 8px;
+        padding-right: 40px;
+      }
+    }
+    .product-info__price{
+      @include bp(xs) {
+        font-size: 14px;
+      }
+    }
+    .product-info__colors{
+      @include bp(xs) {
+        margin-top: -48px;
+      }
+      span{
+        @include bp(xs) {
+          width: 7px;
+          height: 7px;
+        }
+      }
+    }
+    .product-info__variations{
+      >a{
+        @include bp(xs) {
+          width: 45px;
+          height: 45px;
+        }
+      }
+    }
+    .product-info__btn{
+      @include bp(xs) {
+        font-size: 14px;
+        width: 145px;
+      }
+    }
+    .product-info__more{
+      @include bp(xs) {
+        font-size: 14px;
+        padding: 5px 10px;
       }
     }
   }

@@ -64,6 +64,11 @@
       }
     }
   }
+  +.related-section{
+    @include bp(xs) {
+      padding-top: 0;
+    }
+  }
 }
 
 
