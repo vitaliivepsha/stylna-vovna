@@ -477,3 +477,18 @@ $(document).on('change', '.input-file input', function () {
 $('.catalog-filter__caption').click(function () {
     $(this).toggleClass('active').next('.catalog-filter__list').slideToggle();
 });
+
+// product-page go to block
+$(document).on("click", 'a[href^="#"]', function (e) {
+    var id = $(this).attr("href");
+    var $id = $(id);
+    if ($id.length === 0) {
+        return;
+    }
+    e.preventDefault();
+    var pos = $id.offset().top - 150;
+    $("body, html").animate({ scrollTop: pos }, 500);
+});
+$(document).on("click", 'a[href^="#"]', function (e) {
+    e.preventDefault();
+});
