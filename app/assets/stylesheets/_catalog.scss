@@ -8,25 +8,32 @@
 .catalog-page__head {
   display: flex;
   justify-content: space-between;
+  align-items: baseline;
   margin-bottom: 26px;
-  padding-bottom: 9px;
   border-bottom: 1px solid rgba(170, 167, 178, 0.3);
-
+  @include bp(md) {
+    margin-bottom: 13px;
+  }
   &.row {
     display: flex;
     max-width: 1420px;
-    margin: 0 auto;
-    margin-bottom: 26px;
-    padding-bottom: 9px;
-
+    margin: 0 auto 26px;
+    @include bp(md) {
+      margin-bottom: 13px;
+    }
     & .col-md-3 {
       padding-left: 0;
+      padding-bottom: 10px;
     }
 
     & .col-md-9 {
       display: flex;
+      flex-wrap: wrap;
       padding-right: 0;
       padding-left: 5px;
+      @include bp(xs) {
+        padding-left: 0;
+      }
 
       & .catalog-page__head-controls {
         margin-left: auto;
@@ -49,7 +56,10 @@
   display: flex;
   align-items: center;
   gap: 30px;
-
+  padding-bottom: 10px;
+  @include bp(md) {
+    display: none;
+  }
   &>span {
     font-weight: 500;
     font-size: 12px;
@@ -59,8 +69,8 @@
 
   &>div {
     display: flex;
-    align-items: center;
-    gap: 10px;
+    flex-wrap: wrap;
+    margin-bottom: -5px;
 
     & span {
       display: flex;
@@ -76,7 +86,7 @@
       border: 1px solid $grey-txt;
       border-radius: 5px;
       cursor: pointer;
-
+      margin: 5px 10px 5px 0;
       &:hover,
       &:focus {
          color: $red;
@@ -108,6 +118,7 @@
   display: flex;
   align-items: center;
   gap: 20px;
+  padding-bottom: 10px;
 }
 
 // conrolls
@@ -116,12 +127,18 @@
   display: flex;
   align-items: center;
   gap: 30px;
+  @include bp(xs) {
+    gap: unset;
+  }
 
   &>span {
     font-weight: 500;
     font-size: 12px;
     line-height: 14px;
     color: $grey-txt;
+    @include bp(xs) {
+      display: none;
+    }
   }
 
   & .dropdown-sort {
@@ -146,19 +163,27 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
-      gap: 11px;
-      min-width: 157px;
+      min-width: 158px;
       height: 30px;
       padding-left: 15px;
       padding-right: 12px;
       border: 1px solid rgba(170, 167, 178, 0.3);
       border-radius: 5px;
       cursor: pointer;
+      @include bp(xs) {
+        border: none;
+        min-width: 130px;
+        padding: 0;
+        justify-content: center;
+      }
 
       & i {
         display: flex;
         justify-content: center;
         align-items: center;
+        @include bp(xs) {
+          margin-left: 3px;
+        }
       }
     }
 
@@ -195,13 +220,26 @@
 .catalog-page__head-view {
   display: flex;
   gap: 15px;
+  @include bp(xs) {
+    gap: unset;
+  }
 
   &>span {
     display: flex;
     justify-content: center;
     align-items: center;
     cursor: pointer;
-
+    @include bp(xs) {
+      margin-right: 10px;
+    }
+    &:last-child{
+      margin-right: 0;
+    }
+    svg{
+      @include bp(xs) {
+        height: 16px;
+      }
+    }
     &:hover,
     &:focus {
       & svg path {
@@ -499,7 +537,38 @@ max-width: 300px;
   }
 }
 
+.catalog-page__head-mob{
+  display: none;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+  @include bp(md) {
+    display: flex;
+  }
+}
 
+.catalog-page__btn-categories{
+  padding: 5px 0;
+  display: flex;
+  align-items: center;
+  font-size: 11px;
+  line-height: 13px;
+  letter-spacing: 0.03em;
+  svg{
+    margin-left: 5px;
+  }
+}
 
-
-
+.catalog-page__btn-filters{
+  padding: 5px 0;
+  display: flex;
+  align-items: center;
+  font-size: 11px;
+  line-height: 13px;
+  letter-spacing: 0.03em;
+  span{
+    margin-right: 5px;
+    margin-left: 10px;
+    min-width: 110px;
+  }
+}
