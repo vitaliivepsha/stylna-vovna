@@ -135,10 +135,16 @@
   line-height: 145%;
   &.discount{
     color: $red;
+    @include bp(xs) {
+      flex-direction: column-reverse;
+    }
     span{
       margin-left: 17px;
       color: $main;
       text-decoration: line-through;
+      @include bp(xs) {
+        margin-left: 0;
+      }
     }
   }
 }
