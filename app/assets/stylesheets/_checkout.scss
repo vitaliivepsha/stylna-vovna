@@ -248,7 +248,7 @@
           padding: 13px 6px;
           font-size: 12px;
           line-height: 14px;
-          color: $grey;
+          color: $grey-txt;
 
           &:hover,
           &:focus {
@@ -360,6 +360,9 @@
     margin-bottom: 0;
     font-size: 12px;
       line-height: 16px;
+  }
+  &:hover, &:focus{
+    color: $main;
   }
 }
 

@@ -64,6 +64,9 @@
   & .validate-error {
     top: 33px;
   }
+  .input, .textarea{
+    border-color: rgba($grey-txt, .4);
+  }
 }
 .popup-title {
   display: block;

@@ -9,6 +9,9 @@
     border-radius: 10px 10px 0 0;
     text-decoration: none;
     filter: drop-shadow($shadow);
+    .product-pic__wrapper{
+      border-radius: 10px 10px 0 0;
+    }
     .product-pic__tabs{
       opacity: 1;
     }

@@ -64,10 +64,16 @@ $(function () {
     $(window).scroll(function () {
         var scrolled = $(window).scrollTop();
 
-        if (scrolled > 200 /*&& scrolled > scrollPrev*/) {
+        if (scrolled > 200 && scrolled > scrollPrev) {
             header.addClass('fixed');
         } else {
             header.removeClass('fixed');
+        };
+
+        if (scrolled > 200) {
+            header.addClass('filled');
+        } else {
+            header.removeClass('filled');
         }
         scrollPrev = scrolled;
     });
@@ -267,6 +273,10 @@ $(function () {
 
     $('.select').SumoSelect({
         forceCustomRendering: true
+    });
+
+    $('.select').change(function () {
+        $(this).closest('.select-wrapper').addClass('selected');
     });
 
     // checkout

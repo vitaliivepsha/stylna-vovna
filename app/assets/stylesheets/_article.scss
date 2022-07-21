@@ -151,7 +151,11 @@
   gap: 20px;
   text-decoration: none !important;
   color: $main;
-
+  &:hover{
+    .blog-articles-item__about-title, .blog-articles-item__about-date, .blog-articles-item__about-text{
+      color: $accent;
+    }
+  }
   @media (max-width: 991px) {
     gap: 10px;
     flex-wrap: wrap;
@@ -213,6 +217,7 @@
   margin-bottom: 6px;
   font-size: 14px;
   line-height: 16px;
+  color: $main;
 
   @media (max-width: 991px) {
     font-size: 12px;
@@ -244,6 +249,7 @@
     -webkit-line-clamp: 3;
     -webkit-box-orient: vertical;
     overflow: hidden;
+  color: $main;
 
   @media (max-width: 991px) {
     font-size: 12px;

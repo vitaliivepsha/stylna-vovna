@@ -281,7 +281,8 @@
 
         &:hover,
         &:focus {
-          border: 1px solid $red;
+          border: 1px solid $main;
+          color: $main;
         }
       }
     }
@@ -419,11 +420,12 @@ padding-right: 15px;
         height: 165px;
         border-radius: 10px;
         overflow: hidden;
-
+        will-change: transform;
+        -webkit-mask-image: -webkit-radial-gradient(white, black);
         &:hover,
         &:focus {
           & img {
-            transform: scale(1.1);
+            transform: translateZ(0) scale(1.1);
           }
 
         }

@@ -6,6 +6,19 @@
     padding-top: 26px;
     padding-bottom: 56px;
   }
+  +.reviews-section{
+    background-color: #fff;
+    .reviews-slider{
+      .slide{
+        border: 1px solid $light;
+      }
+    }
+    .reviews-arrow{
+      &.reviews-slider__prev, &.reviews-slider__next{
+        border-color: #fff;
+      }
+    }
+  }
 }
 
 .experts-logo{
@@ -85,8 +98,14 @@
       width: 94px;
     }
     &:first-child{
-      @include bp(xs) {
-        margin: 0 30px 27px;
+      @media only screen and (max-width: 499px){
+        margin: 0 100px 27px;
+      }
+      @media only screen and (max-width: 399px){
+        margin: 0 70px 27px;
+      }
+      @include bp(xxs) {
+        margin: 0 50px 27px;
       }
     }
     &:last-child{

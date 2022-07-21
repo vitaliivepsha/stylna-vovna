@@ -11,10 +11,16 @@
     border-bottom: none;
   }
   &.fixed {
-    background-color: $white-opacity;
+    top: -198px;
+    @include bp(lg) {
+      top: -180px;
+    }
     @include bp(md) {
       top: 0;
     }
+  }
+  &.filled {
+    background-color: $white-opacity;
     .header-top{
       height: 70px;
       padding-top: 0;
@@ -119,6 +125,7 @@
   @include bp(xs) {
     width: 150px;
     height: 29px;
+    transform: translateY(5px);
   }
   img{
     width: 100%;
@@ -231,6 +238,7 @@
   transition: 0.2s linear;
   @include bp(xs) {
     right: -30px;
+    min-width: 158px;
   }
 }
 
@@ -238,7 +246,7 @@
   filter: drop-shadow($shadow);
   background-color: #fff;
   position: relative;
-  padding: 16px;
+  padding: 16px 16px 16px 32px;
   margin-top: 10px;
   &:before{
     position: absolute;
@@ -251,6 +259,8 @@
   }
   a{
     min-width: max-content;
+    list-style-type: disc;
+    display: list-item;
     +a{
       margin-top: 5px;
     }
@@ -644,12 +654,12 @@
       margin-left: 10px;
       display: block;
       min-width: 20px;
-      padding: 0 3px;
+      padding: 3px;
       text-align: center;
       font-weight: 400;
       font-size: 12px;
       height: 20px;
-      line-height: 20px;
+      line-height: 14px;
       border-radius: 20px;
       background-color: $red;
       color: #fff;

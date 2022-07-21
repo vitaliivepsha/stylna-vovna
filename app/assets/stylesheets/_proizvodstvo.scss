@@ -39,7 +39,9 @@
 }
 
 .proizvodstvo__text {
-  margin-bottom: 120px;
+  width: 940px;
+  max-width: 100%;
+  margin: 0 auto 120px;
   @media (max-width: 574px) {
     margin-bottom: 35px;
   }
